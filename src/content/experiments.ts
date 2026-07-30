@@ -32,7 +32,7 @@ export const experiments: Experiment[] = [
   },
   {
     id: "payson-football",
-    name: "PaysonFootball.com",
+    name: "Payson Football",
     why: "Following youth football shouldn't require searching multiple places for schedules, locations, weather, and team information—especially for families with multiple players.",
     status: "Live",
     href: "https://paysonfootball.com",
