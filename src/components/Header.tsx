@@ -44,15 +44,6 @@ export function Header() {
               {item.label}
             </a>
           ))}
-          <a
-            href={site.founder.siteUrl}
-            className="ml-2 rounded-md border border-border bg-background-elevated/70 px-2.5 py-1.5 text-foreground transition-colors hover:border-border-strong hover:text-accent-strong"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <span className="sr-only">Founder&apos;s personal site: </span>
-            {site.founder.siteLabel}
-          </a>
         </nav>
 
         <button
@@ -83,16 +74,6 @@ export function Header() {
                 {item.label}
               </a>
             ))}
-            <a
-              href={site.founder.siteUrl}
-              className="rounded-md px-2 py-2.5 text-foreground transition-colors hover:bg-surface"
-              rel="noopener noreferrer"
-              target="_blank"
-              onClick={() => setOpen(false)}
-            >
-              {site.founder.siteLabel}
-              <span className="text-muted"> — founder&apos;s site</span>
-            </a>
           </div>
         </nav>
       ) : null}

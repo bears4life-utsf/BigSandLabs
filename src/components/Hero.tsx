@@ -19,13 +19,9 @@ export function Hero() {
             <p className="hero-label">{hero.eyebrow}</p>
           </div>
 
-          <p className="reveal reveal-delay-1 mt-7 font-serif text-lg tracking-tight text-foreground/80 sm:text-xl">
-            {hero.brand}
-          </p>
-
           <h1
             id="hero-heading"
-            className="reveal reveal-delay-1 mt-2 font-serif text-[2.6rem] leading-[1.02] tracking-tight text-foreground sm:text-5xl lg:text-[3.75rem]"
+            className="reveal reveal-delay-1 mt-6 font-serif text-[2.6rem] leading-[1.02] tracking-tight text-foreground sm:text-5xl lg:text-[3.75rem]"
           >
             {hero.headline}
           </h1>
@@ -60,12 +56,7 @@ export function Hero() {
                     ↓
                   </span>
                 ) : null}
-                <span className="progression-step">
-                  <span className="progression-index" aria-hidden="true">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  {step}
-                </span>
+                <span className="progression-step">{step}</span>
               </li>
             ))}
           </ol>

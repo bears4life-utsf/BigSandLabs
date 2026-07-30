@@ -16,7 +16,6 @@ export const site = {
   ],
   hero: {
     eyebrow: "Curiosity-Driven Software",
-    brand: "Big Sand Labs",
     headline: "Build What Matters.",
     supporting:
       "Big Sand Labs exists because the best software starts with curiosity.",
