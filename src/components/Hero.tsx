@@ -26,7 +26,7 @@ export function Hero() {
             {hero.headline}
           </h1>
 
-          <p className="reveal reveal-delay-2 mt-8 max-w-xl text-lg leading-[1.65] text-foreground/85 sm:text-xl sm:leading-[1.7]">
+          <p className="reveal reveal-delay-2 mt-6 max-w-xl text-lg leading-[1.65] text-foreground/85 sm:text-xl sm:leading-[1.7]">
             {hero.supporting}
           </p>
 
@@ -47,7 +47,7 @@ export function Hero() {
 
           <ol
             aria-label="Guiding principles"
-            className="progression-track reveal reveal-delay-4 mt-5 sm:mt-6"
+            className="progression-track reveal reveal-delay-4 mt-3 sm:mt-4"
           >
             {hero.progression.map((step, index) => (
               <li key={step} className="flex items-center">
