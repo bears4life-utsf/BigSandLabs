@@ -13,7 +13,6 @@ export type Project = {
   href?: string;
   hrefLabel?: string;
   accent: string;
-  visualLabel: string;
 };
 
 export const projects: Project[] = [
@@ -25,7 +24,6 @@ export const projects: Project[] = [
     category: "Personal Finance",
     status: "In Development",
     accent: "#3E5C6B",
-    visualLabel: "Cash clarity",
   },
   {
     id: "payson-football",
@@ -37,7 +35,6 @@ export const projects: Project[] = [
     href: "https://paysonfootball.com",
     hrefLabel: "Visit site",
     accent: "#5C6B58",
-    visualLabel: "Community hub",
   },
   {
     id: "product-tradeoff-engine",
@@ -49,7 +46,6 @@ export const projects: Project[] = [
     href: "https://zekesmith.dev/#tradeoffs",
     hrefLabel: "Try the model",
     accent: "#6B5E4E",
-    visualLabel: "Tradeoff model",
   },
   {
     id: "pokescout",
@@ -61,7 +57,6 @@ export const projects: Project[] = [
     href: "https://bears4life-utsf.github.io/pokescout/",
     hrefLabel: "Open PokeScout",
     accent: "#7A6B3E",
-    visualLabel: "Type matchups",
   },
   {
     id: "electronic-waiver",
@@ -71,6 +66,5 @@ export const projects: Project[] = [
     category: "Youth Sports Operations",
     status: "Exploring",
     accent: "#4F6678",
-    visualLabel: "Sign & submit",
   },
 ];

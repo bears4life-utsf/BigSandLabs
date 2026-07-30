@@ -180,9 +180,3 @@ body {
     animation: none;
   }
 }
-
-.project-visual {
-  background:
-    linear-gradient(145deg, color-mix(in srgb, var(--project-accent) 18%, white), transparent 58%),
-    linear-gradient(180deg, var(--background-elevated), var(--surface));
-}
