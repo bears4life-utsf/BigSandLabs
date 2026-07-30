@@ -2,7 +2,7 @@ export const site = {
   name: "Big Sand Labs",
   title: "Big Sand Labs — Build What Matters",
   description:
-    "Big Sand Labs turns curiosity into practical software. We explore everyday problems through experiments, and share the solutions that make life a little better.",
+    "Big Sand Labs exists because the best software starts with curiosity. Every experiment begins with a real problem. Some ideas remain experiments. Others become products worth sharing.",
   url: "https://bears4life-utsf.github.io/BigSandLabs",
   founder: {
     name: "Zeke Smith",
@@ -18,18 +18,18 @@ export const site = {
     brand: "Big Sand Labs",
     headline: "Build What Matters.",
     supporting:
-      "We turn curiosity into practical software. Every experiment begins with a real problem, a question worth exploring, or something we simply believe could work better. Some remain experiments. Others become products worth sharing.",
+      "Big Sand Labs exists because the best software starts with curiosity. Every experiment begins with a real problem, a question worth exploring, or the belief that something could work better. Some ideas remain experiments. Others become products worth sharing.",
     primaryCta: { label: "Explore the experiments", href: "#experiments" },
     secondaryCta: { label: "Read our philosophy", href: "#philosophy" },
-    progression: ["Problem", "Experiment", "Tool", "Product"] as const,
+    progression: ["Curiosity", "Experiment", "Product"] as const,
   },
   philosophy: {
     eyebrow: "Philosophy",
-    headline: "Build What Matters.",
+    headline: "Curiosity leads. Usefulness decides.",
     intro:
-      "Big Sand Labs is a place where ideas become experiments, experiments become tools, and the best of those tools become products worth sharing. Building is how we learn, solve problems, and improve everyday life.",
+      "We notice everyday problems, explore them by building, and share what proves genuinely useful.",
     guidingPrinciple:
-      "Build What Matters. Explore ideas through creating. Share the solutions that make life a little better.",
+      "Curiosity → Experiment → Product worth sharing.",
     principles: [
       {
         title: "See Opportunities",
@@ -50,32 +50,32 @@ export const site = {
   },
   experiments: {
     eyebrow: "Experiments",
-    headline: "Currently on the workbench",
+    headline: "On the workbench",
     intro:
-      "Every idea begins as an experiment. Some are still evolving. Others are Live—products worth sharing that we maintain and recommend.",
+      "Some are still Experiments—ideas we are actively exploring. Others are Live—products worth sharing that we maintain and recommend.",
   },
   process: {
     eyebrow: "How ideas move",
-    headline: "Not every experiment needs to become a product.",
+    headline: "Not every experiment becomes a product.",
     intro:
-      "Every idea begins as an experiment. The most useful ones become Live. Stopping along the way is okay—useful does not have to mean finished.",
-    stages: ["Problem", "Experiment", "Tool", "Product"] as const,
+      "And that is okay. Useful learning does not require a finished product.",
+    stages: ["Curiosity", "Experiment", "Product"] as const,
   },
   about: {
     eyebrow: "About",
     headline: "An independent software lab",
     paragraphs: [
-      "Big Sand Labs was created by Zeke Smith, a longtime software product leader who learns best by building. It is a home for the experiments, tools, and products that emerge when everyday problems meet curiosity.",
-      "After years of building and leading software products, Zeke uses personal projects to keep learning—and to create things that make life a little clearer, simpler, or more useful.",
+      "Big Sand Labs was created by Zeke Smith, a software product leader who learns best by building. It is a home for curiosity-driven experiments and the products worth sharing that grow from them.",
+      "He builds to understand problems more clearly—and to make everyday life a little simpler, clearer, or more useful.",
     ],
     linkLabel: "Visit ZekeSmith.dev",
     linkNote:
-      "Leadership writing, professional background, and product thinking.",
+      "Writing, background, and product thinking.",
   },
   closing: {
-    headline: "What problem is worth exploring next?",
+    headline: "What is worth exploring next?",
     supporting:
-      "New work appears here as ideas become experiments and the most useful ones find their way into the world.",
+      "New work appears here as curiosity becomes an experiment—and as the most useful experiments become products worth sharing.",
     primaryCta: { label: "View experiments", href: "#experiments" },
     secondaryCta: {
       label: "Visit ZekeSmith.dev",
@@ -83,7 +83,6 @@ export const site = {
     },
   },
   footer: {
-    tagline:
-      "Build What Matters. Explore ideas through creating. Share the solutions that make life a little better.",
+    tagline: "Curiosity. Experiment. Product worth sharing.",
   },
 } as const;
