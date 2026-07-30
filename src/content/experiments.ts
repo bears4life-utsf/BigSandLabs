@@ -23,6 +23,14 @@ export const experiments: Experiment[] = [
     hrefLabel: "Open FairwayCast",
   },
   {
+    id: "closetcast",
+    name: "ClosetCast",
+    why: "The weather tells you the temperature—but not what to wear.",
+    status: "Experiment",
+    href: "https://bears4life-utsf.github.io/ClosetCast/",
+    hrefLabel: "Open ClosetCast",
+  },
+  {
     id: "chordframe",
     name: "ChordFrame",
     why: "Playing through an entire song shouldn't require stopping to scroll.",
