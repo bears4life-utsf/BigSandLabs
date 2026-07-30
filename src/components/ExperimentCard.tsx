@@ -9,7 +9,7 @@ export function ExperimentCard({ experiment }: ExperimentCardProps) {
     <>
       <div className="experiment-meta">
         <p className="experiment-category">{experiment.category}</p>
-        <p className="experiment-stage">{experiment.stage}</p>
+        <p className="experiment-status">{experiment.status}</p>
       </div>
 
       <h3 className="experiment-name">{experiment.name}</h3>

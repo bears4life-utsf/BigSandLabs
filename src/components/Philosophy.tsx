@@ -36,9 +36,9 @@ export function Philosophy() {
           ))}
         </ul>
 
-        <blockquote className="prose-measure mt-16 border-l-2 border-accent pl-5 sm:pl-6">
+        <blockquote className="philosophy-callout mt-16 max-w-3xl">
           <p className="font-serif text-xl leading-snug text-foreground sm:text-2xl">
-            {philosophy.pullQuote}
+            {philosophy.guidingPrinciple}
           </p>
         </blockquote>
       </div>

@@ -1,8 +1,8 @@
 export const site = {
   name: "Big Sand Labs",
-  title: "Big Sand Labs — Where ideas become experiments",
+  title: "Big Sand Labs — Build What Matters",
   description:
-    "Big Sand Labs is an independent software workshop for practical experiments born from curiosity and real-world problems.",
+    "Big Sand Labs turns curiosity into practical software. We explore everyday problems through experiments, and share the solutions that make life a little better.",
   url: "https://bears4life-utsf.github.io/BigSandLabs",
   founder: {
     name: "Zeke Smith",
@@ -16,35 +16,35 @@ export const site = {
   ],
   hero: {
     brand: "Big Sand Labs",
-    headline: "Practical software born from curiosity and real-world problems.",
+    headline: "Build What Matters.",
     supporting:
-      "We build software, AI tools, and digital products that often begin as personal projects, experiments, or solutions to everyday frustrations.",
+      "We turn curiosity into practical software. Every experiment begins with a real problem, a question worth exploring, or something we simply believe could work better. Some remain experiments. Others become products worth sharing.",
     primaryCta: { label: "Explore the experiments", href: "#experiments" },
     secondaryCta: { label: "Read our philosophy", href: "#philosophy" },
     progression: ["Problem", "Experiment", "Tool", "Product"] as const,
   },
   philosophy: {
     eyebrow: "Philosophy",
-    headline: "Build the things you wish existed.",
+    headline: "Build What Matters.",
     intro:
-      "Everything starts with curiosity. We notice friction, build to learn, and share what proves useful.",
-    pullQuote:
-      "We do not start with markets. We start with problems worth solving.",
+      "Big Sand Labs is a place where ideas become experiments, experiments become tools, and the best of those tools become products worth sharing. Building is how we learn, solve problems, and improve everyday life.",
+    guidingPrinciple:
+      "Build What Matters. Explore ideas through creating. Share the solutions that make life a little better.",
     principles: [
       {
-        title: "Notice friction",
+        title: "See Opportunities",
         description:
-          "Pay attention to unnecessary work, confusing experiences, and everyday problems.",
+          "Pay attention to the small problems we encounter every day. Ask questions. Stay curious. The best ideas often begin with something most people simply learn to live with.",
       },
       {
-        title: "Learn by building",
+        title: "Explore Solutions",
         description:
-          "Build real things to understand ideas, technologies, and possibilities.",
+          "Learn by creating. Start small. Improve incrementally. Building isn't the goal—understanding is. Every experiment teaches something, whether it becomes a product or not.",
       },
       {
-        title: "Share what works",
+        title: "Share What Works",
         description:
-          "When an experiment proves genuinely useful, share it with others.",
+          "When something proves genuinely useful, put it into the world. Sometimes that means a free tool. Sometimes it's open source. Sometimes it's a product worth paying for. What matters is helping people by sharing solutions that make life a little better.",
       },
     ],
   },
@@ -52,21 +52,21 @@ export const site = {
     eyebrow: "Experiments",
     headline: "Currently on the workbench",
     intro:
-      "Each experiment began with a real problem or a desire to learn. They sit at different stages—from early builds to tools already in use.",
+      "Every idea begins as an experiment. Some are still evolving. Others are Live—products worth sharing that we maintain and recommend.",
   },
   process: {
     eyebrow: "How ideas move",
     headline: "Not every experiment needs to become a product.",
     intro:
-      "Stopping at any stage is okay. A successful experiment does not always need to become a company.",
+      "Every idea begins as an experiment. The most useful ones become Live. Stopping along the way is okay—useful does not have to mean finished.",
     stages: ["Problem", "Experiment", "Tool", "Product"] as const,
   },
   about: {
     eyebrow: "About",
-    headline: "An independent software workshop",
+    headline: "An independent software lab",
     paragraphs: [
-      "Big Sand Labs was created by Zeke Smith, a longtime software product leader who learns best by building. It is a home for the tools, experiments, and products that emerge when practical problems meet curiosity.",
-      "After a career building and leading software products, Zeke uses personal projects to deepen his technical and AI expertise—and to create software he wishes existed.",
+      "Big Sand Labs was created by Zeke Smith, a longtime software product leader who learns best by building. It is a home for the experiments, tools, and products that emerge when everyday problems meet curiosity.",
+      "After years of building and leading software products, Zeke uses personal projects to keep learning—and to create things that make life a little clearer, simpler, or more useful.",
     ],
     linkLabel: "Visit ZekeSmith.dev",
     linkNote:
@@ -75,7 +75,7 @@ export const site = {
   closing: {
     headline: "What problem is worth exploring next?",
     supporting:
-      "New work appears here as ideas become experiments and experiments become useful tools.",
+      "New work appears here as ideas become experiments and the most useful ones find their way into the world.",
     primaryCta: { label: "View experiments", href: "#experiments" },
     secondaryCta: {
       label: "Visit ZekeSmith.dev",
@@ -83,6 +83,7 @@ export const site = {
     },
   },
   footer: {
-    tagline: "Notice friction. Learn by building. Share what works.",
+    tagline:
+      "Build What Matters. Explore ideas through creating. Share the solutions that make life a little better.",
   },
 } as const;

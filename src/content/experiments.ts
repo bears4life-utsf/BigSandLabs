@@ -1,9 +1,4 @@
-export type ExperimentStage =
-  | "In Use"
-  | "Working Tool"
-  | "Early Experiment"
-  | "Learning Build"
-  | "Archived";
+export type ExperimentStatus = "Experiment" | "Live";
 
 export type Experiment = {
   id: string;
@@ -13,7 +8,7 @@ export type Experiment = {
   /** One concrete sentence — what someone can do with it. */
   capability: string;
   category: string;
-  stage: ExperimentStage;
+  status: ExperimentStatus;
   href?: string;
   hrefLabel?: string;
   accent: string;
@@ -27,7 +22,7 @@ export const experiments: Experiment[] = [
     capability:
       "Find schedules, coaches, announcements, and team information in one place.",
     category: "Community Software",
-    stage: "In Use",
+    status: "Live",
     href: "https://paysonfootball.com",
     hrefLabel: "Visit site",
     accent: "#5C6B58",
@@ -39,7 +34,7 @@ export const experiments: Experiment[] = [
     capability:
       "Enter a year and browse the events that shaped that moment in history.",
     category: "History Tool",
-    stage: "Working Tool",
+    status: "Experiment",
     href: "https://bears4life-utsf.github.io/TimeFrame/",
     hrefLabel: "Open TimeFrame",
     accent: "#4A6D8C",
@@ -51,7 +46,7 @@ export const experiments: Experiment[] = [
     capability:
       "View songs in a clean multi-column layout designed to stay visible while you play.",
     category: "Music Tool",
-    stage: "Working Tool",
+    status: "Experiment",
     href: "https://bears4life-utsf.github.io/ChordFrame/",
     hrefLabel: "Open ChordFrame",
     accent: "#6B5E4E",
@@ -63,7 +58,7 @@ export const experiments: Experiment[] = [
     capability:
       "Check a course and tee time, then get a clear should-I-play recommendation.",
     category: "Sports Tool",
-    stage: "Working Tool",
+    status: "Experiment",
     href: "https://bears4life-utsf.github.io/FairwayCast/",
     hrefLabel: "Open FairwayCast",
     accent: "#2F6B4F",
@@ -74,8 +69,8 @@ export const experiments: Experiment[] = [
     problem: "I wanted to learn by building something fun.",
     capability:
       "Search Pokémon and compare types to understand matchups at a glance.",
-    category: "Learning Build",
-    stage: "Learning Build",
+    category: "Learning",
+    status: "Experiment",
     href: "https://bears4life-utsf.github.io/PokeScout/",
     hrefLabel: "Open PokeScout",
     accent: "#7A6B3E",
