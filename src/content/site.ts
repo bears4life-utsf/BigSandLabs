@@ -16,12 +16,12 @@ export const site = {
   ],
   hero: {
     brand: "Big Sand Labs",
-    impression: "This is where ideas become experiments.",
     headline: "Practical software born from curiosity and real-world problems.",
     supporting:
-      "Most ideas begin as personal attempts to remove friction, understand something more clearly, or learn by building. Some stay personal. Some become useful enough to share.",
+      "We build software, AI tools, and digital products that often begin as personal projects, experiments, or solutions to everyday frustrations.",
     primaryCta: { label: "Explore the experiments", href: "#experiments" },
     secondaryCta: { label: "Read our philosophy", href: "#philosophy" },
+    progression: ["Problem", "Experiment", "Tool", "Product"] as const,
   },
   philosophy: {
     eyebrow: "Philosophy",
@@ -52,7 +52,7 @@ export const site = {
     eyebrow: "Experiments",
     headline: "Currently on the workbench",
     intro:
-      "Each experiment began with a real problem or a desire to learn. Technology is secondary. The original question comes first.",
+      "Each experiment began with a real problem or a desire to learn. They sit at different stages—from early builds to tools already in use.",
   },
   process: {
     eyebrow: "How ideas move",
