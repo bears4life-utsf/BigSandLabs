@@ -1,26 +1,188 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Sand, stone, water — warm light theme */
+  --background: #f2efe8;
+  --background-elevated: #faf8f4;
+  --surface: #e8e4db;
+  --foreground: #2a2926;
+  --muted: #6b6860;
+  --border: rgba(42, 41, 38, 0.12);
+  --border-strong: rgba(42, 41, 38, 0.2);
+
+  /* Slate-blue water accent */
+  --accent: #3e5c6b;
+  --accent-soft: rgba(62, 92, 107, 0.1);
+  --accent-strong: #2f4754;
+
+  /* Supporting naturals */
+  --sage: #5c6b58;
+  --stone: #8a8478;
+  --sand-deep: #d9d2c4;
+
+  --nav-bg: rgba(242, 239, 232, 0.86);
+  --shadow-soft: 0 1px 2px rgba(42, 41, 38, 0.04),
+    0 14px 36px -18px rgba(42, 41, 38, 0.14);
+  --shadow-hover: 0 1px 2px rgba(42, 41, 38, 0.05),
+    0 20px 44px -18px rgba(42, 41, 38, 0.2);
+
+  --hero-wash-a: rgba(62, 92, 107, 0.08);
+  --hero-wash-b: rgba(92, 107, 88, 0.07);
+  --hero-grain: rgba(42, 41, 38, 0.035);
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-elevated: var(--background-elevated);
+  --color-surface: var(--surface);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-strong: var(--accent-strong);
+  --color-sage: var(--sage);
+  --color-stone: var(--stone);
+  --color-sand-deep: var(--sand-deep);
+  --color-nav-bg: var(--nav-bg);
+  --font-sans: var(--font-figtree);
+  --font-serif: var(--font-source-serif);
+  --shadow-soft: var(--shadow-soft);
+  --shadow-hover: var(--shadow-hover);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  z-index: 100;
+  transform: translateY(-160%);
+  border-radius: 999px;
+  background: var(--foreground);
+  color: var(--background-elevated);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.font-serif {
+  font-family: var(--font-serif), ui-serif, Georgia, serif;
+}
+
+.section-shell {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 72rem;
+  padding-inline: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .section-shell {
+    padding-inline: 2rem;
+  }
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.hero-atmosphere {
+  background:
+    radial-gradient(ellipse 80% 60% at 15% 20%, var(--hero-wash-a), transparent 55%),
+    radial-gradient(ellipse 70% 50% at 90% 10%, var(--hero-wash-b), transparent 50%),
+    linear-gradient(180deg, #ebe7de 0%, var(--background) 72%);
+}
+
+.hero-grain {
+  background-image: radial-gradient(var(--hero-grain) 0.7px, transparent 0.7px);
+  background-size: 3px 3px;
+  opacity: 0.55;
+  mask-image: linear-gradient(180deg, black 40%, transparent 100%);
+}
+
+.reveal {
+  animation: rise 0.7s ease both;
+}
+
+.reveal-delay-1 {
+  animation-delay: 0.08s;
+}
+
+.reveal-delay-2 {
+  animation-delay: 0.16s;
+}
+
+.reveal-delay-3 {
+  animation-delay: 0.24s;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-delay-1,
+  .reveal-delay-2,
+  .reveal-delay-3 {
+    animation: none;
+  }
+}
+
+.project-visual {
+  background:
+    linear-gradient(145deg, color-mix(in srgb, var(--project-accent) 18%, white), transparent 58%),
+    linear-gradient(180deg, var(--background-elevated), var(--surface));
 }
