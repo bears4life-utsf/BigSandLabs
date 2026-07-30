@@ -7,25 +7,18 @@ type ExperimentCardProps = {
 export function ExperimentCard({ experiment }: ExperimentCardProps) {
   const content = (
     <>
-      <div className="experiment-meta">
-        <p className="experiment-category">{experiment.category}</p>
-        <p className="experiment-status">{experiment.status}</p>
+      <div className="experiment-heading">
+        <h3 className="experiment-name">{experiment.name}</h3>
+        <span className="experiment-status-chip">{experiment.status}</span>
       </div>
 
-      <h3 className="experiment-name">{experiment.name}</h3>
-
-      <div className="experiment-note">
-        <p className="experiment-note-label">Observation</p>
+      <div className="experiment-story">
         <p className="experiment-observation">{experiment.observation}</p>
         {experiment.observationHighlight ? (
           <p className="experiment-observation-highlight">
             {experiment.observationHighlight}
           </p>
         ) : null}
-      </div>
-
-      <div className="experiment-note experiment-note-exploration">
-        <p className="experiment-note-label">Experiment</p>
         <p className="experiment-exploration">{experiment.exploration}</p>
       </div>
 

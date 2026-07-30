@@ -381,7 +381,7 @@ body {
   flex-direction: column;
   border: 1px solid var(--border);
   background: var(--background-elevated);
-  padding: 1.65rem 1.5rem 1.7rem;
+  padding: 1.75rem 1.55rem 1.7rem;
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -390,75 +390,58 @@ body {
   box-shadow: var(--shadow-soft);
 }
 
-.experiment-meta {
+.experiment-heading {
   display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-}
-
-.experiment-category,
-.experiment-status {
-  margin: 0;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.experiment-category {
-  color: var(--stone);
-}
-
-.experiment-status {
-  color: var(--muted);
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem 1.25rem;
 }
 
 .experiment-name {
-  margin-top: 1.25rem;
+  margin: 0;
   font-family: var(--font-serif), ui-serif, Georgia, serif;
-  font-size: 1.65rem;
+  font-size: 1.7rem;
   line-height: 1.15;
   letter-spacing: -0.02em;
   color: var(--foreground);
 }
 
-.experiment-note {
-  margin-top: 1.35rem;
-}
-
-.experiment-note-exploration {
-  margin-top: 1.15rem;
-  flex: 1;
-}
-
-.experiment-note-label {
-  margin: 0 0 0.45rem;
+.experiment-status-chip {
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--sand-deep) 45%, white);
+  padding: 0.22rem 0.65rem;
   font-size: 0.68rem;
   font-weight: 600;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--stone);
+  color: var(--muted);
+}
+
+.experiment-story {
+  margin-top: 1.35rem;
+  flex: 1;
 }
 
 .experiment-observation {
   margin: 0;
-  font-family: var(--font-serif), ui-serif, Georgia, serif;
-  font-size: 1.08rem;
-  line-height: 1.45;
+  font-size: 1.05rem;
+  line-height: 1.55;
   color: var(--foreground);
 }
 
 .experiment-observation-highlight {
-  margin: 0.65rem 0 0;
+  margin: 0.7rem 0 0;
   font-family: var(--font-serif), ui-serif, Georgia, serif;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 600;
   line-height: 1.35;
   color: var(--foreground);
 }
 
 .experiment-exploration {
-  margin: 0;
+  margin: 1rem 0 0;
   font-size: 0.95rem;
   line-height: 1.6;
   color: var(--muted);

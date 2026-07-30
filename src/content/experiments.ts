@@ -9,7 +9,6 @@ export type Experiment = {
   observationHighlight?: string;
   /** The exploration — how we attempt a better solution. */
   exploration: string;
-  category: string;
   status: ExperimentStatus;
   href?: string;
   hrefLabel?: string;
@@ -25,7 +24,6 @@ export const experiments: Experiment[] = [
     observationHighlight: "Should I play golf today?",
     exploration:
       "Combine weather conditions into a simple recommendation that helps golfers decide whether to play and what to expect on the course.",
-    category: "Sports Tool",
     status: "Experiment",
     href: "https://bears4life-utsf.github.io/FairwayCast/",
     hrefLabel: "Open FairwayCast",
@@ -38,7 +36,6 @@ export const experiments: Experiment[] = [
       "Learning Pokémon alongside my kids meant constantly searching for information about characters, battles, and type matchups.",
     exploration:
       "Create a simple reference that makes it easy to explore Pokémon, understand strengths and weaknesses, and discover information more quickly.",
-    category: "Learning",
     status: "Experiment",
     href: "https://bears4life-utsf.github.io/PokeScout/",
     hrefLabel: "Open PokeScout",
@@ -51,7 +48,6 @@ export const experiments: Experiment[] = [
       "Following youth football shouldn't require searching multiple places for schedules, locations, weather, and team information—especially for families with multiple players.",
     exploration:
       "Bring schedules, teams, maps, weather, and parent resources together into one simple destination.",
-    category: "Community Software",
     status: "Live",
     href: "https://paysonfootball.com",
     hrefLabel: "Visit site",
@@ -64,7 +60,6 @@ export const experiments: Experiment[] = [
       "Historical events and notable birthdays are scattered across different sources, making it difficult to see what makes a particular day interesting.",
     exploration:
       "Combine multiple APIs into a single timeline that turns any date into a window through history.",
-    category: "History Tool",
     status: "Experiment",
     href: "https://bears4life-utsf.github.io/TimeFrame/",
     hrefLabel: "Open TimeFrame",
@@ -77,7 +72,6 @@ export const experiments: Experiment[] = [
       "Playing guitar shouldn't require constantly scrolling through chord sheets and taking a hand off the instrument.",
     exploration:
       "Display chords and lyrics in a clean multi-column layout so an entire song stays visible while you play.",
-    category: "Music Tool",
     status: "Experiment",
     href: "https://bears4life-utsf.github.io/ChordFrame/",
     hrefLabel: "Open ChordFrame",
