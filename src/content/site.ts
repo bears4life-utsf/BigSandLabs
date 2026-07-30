@@ -2,7 +2,7 @@ export const site = {
   name: "Big Sand Labs",
   title: "Big Sand Labs — Build What Matters",
   description:
-    "Big Sand Labs exists because the best software starts with curiosity. Every experiment begins with a real problem. Some ideas remain experiments. Others become products worth sharing.",
+    "Big Sand Labs exists because the best software starts with curiosity. Every experiment begins with a simple observation. The best become products worth sharing.",
   url: "https://bears4life-utsf.github.io/BigSandLabs",
   founder: {
     name: "Zeke Smith",
@@ -18,10 +18,11 @@ export const site = {
     brand: "Big Sand Labs",
     headline: "Build What Matters.",
     supporting:
-      "Big Sand Labs exists because the best software starts with curiosity. Every experiment begins with a real problem, a question worth exploring, or the belief that something could work better. Some ideas remain experiments. Others become products worth sharing.",
+      "Big Sand Labs exists because the best software starts with curiosity.",
     primaryCta: { label: "Explore the experiments", href: "#experiments" },
     secondaryCta: { label: "Read our philosophy", href: "#philosophy" },
-    progression: ["Curiosity", "Experiment", "Product"] as const,
+    statement:
+      "Every experiment begins with a simple observation. The best become products worth sharing.",
   },
   philosophy: {
     eyebrow: "Philosophy",
@@ -53,13 +54,6 @@ export const site = {
     headline: "On the workbench",
     intro:
       "Every experiment begins with an observation. The cards below share why each one exists—open one to read the full story.",
-  },
-  process: {
-    eyebrow: "How ideas move",
-    headline: "Not every experiment becomes a product.",
-    intro:
-      "And that is okay. Useful learning does not require a finished product.",
-    stages: ["Curiosity", "Experiment", "Product"] as const,
   },
   about: {
     eyebrow: "About",

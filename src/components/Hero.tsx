@@ -49,24 +49,9 @@ export function Hero() {
             </a>
           </div>
 
-          <ol
-            aria-label="How ideas progress"
-            className="progression-track reveal reveal-delay-4 mt-14"
-          >
-            {hero.progression.map((step, index) => (
-              <li key={step} className="flex items-center">
-                {index > 0 ? (
-                  <span className="progression-connector" aria-hidden="true" />
-                ) : null}
-                <span className="progression-step">
-                  <span className="progression-index" aria-hidden="true">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  {step}
-                </span>
-              </li>
-            ))}
-          </ol>
+          <p className="hero-statement reveal reveal-delay-4 mt-16 max-w-lg font-serif text-xl leading-[1.55] text-foreground/70 sm:mt-20 sm:text-[1.35rem] sm:leading-[1.6]">
+            {hero.statement}
+          </p>
         </div>
       </div>
     </section>
