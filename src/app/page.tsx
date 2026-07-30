@@ -1,25 +1,28 @@
 import { About } from "@/components/About";
 import { Closing } from "@/components/Closing";
+import { Experiments } from "@/components/Experiments";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import { HowProjectsEvolve } from "@/components/HowProjectsEvolve";
 import { Philosophy } from "@/components/Philosophy";
-import { Projects } from "@/components/Projects";
+import { Process } from "@/components/Process";
 
 export default function Home() {
   return (
     <>
-      <Header />
-      <main id="main">
-        <Hero />
-        <Philosophy />
-        <Projects />
-        <HowProjectsEvolve />
-        <About />
-        <Closing />
-      </main>
-      <Footer />
+      <div className="page-grain" aria-hidden="true" />
+      <div className="site-frame">
+        <Header />
+        <main id="main">
+          <Hero />
+          <Philosophy />
+          <Experiments />
+          <Process />
+          <About />
+          <Closing />
+        </main>
+        <Footer />
+      </div>
     </>
   );
 }

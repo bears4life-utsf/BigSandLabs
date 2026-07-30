@@ -7,30 +7,30 @@ export function About() {
     <section
       id="about"
       aria-labelledby="about-heading"
-      className="scroll-mt-20 border-b border-border/80 py-20 sm:py-24"
+      className="section-band scroll-mt-20 py-20 sm:py-28"
     >
-      <div className="section-shell grid gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] lg:items-end lg:gap-16">
+      <div className="section-shell grid gap-12 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:items-start lg:gap-16">
         <div>
           <p className="eyebrow">{about.eyebrow}</p>
           <h2
             id="about-heading"
-            className="mt-4 font-serif text-3xl leading-tight tracking-tight text-foreground sm:text-4xl lg:text-[2.75rem]"
+            className="mt-4 font-serif text-3xl leading-tight tracking-tight text-foreground sm:text-4xl"
           >
             {about.headline}
           </h2>
           {about.paragraphs.map((paragraph) => (
             <p
               key={paragraph.slice(0, 32)}
-              className="mt-5 text-base leading-relaxed text-muted sm:text-lg"
+              className="mt-5 max-w-xl text-base leading-relaxed text-muted sm:text-lg"
             >
               {paragraph}
             </p>
           ))}
         </div>
 
-        <aside className="rounded-xl border border-border bg-background-elevated p-6 shadow-soft sm:p-7">
-          <p className="text-sm font-medium text-foreground">Created by</p>
-          <p className="mt-1 font-serif text-2xl text-foreground">
+        <aside className="border border-border bg-background-elevated p-6 sm:p-7">
+          <p className="text-sm font-medium text-stone">Created by</p>
+          <p className="mt-2 font-serif text-2xl text-foreground">
             {founder.name}
           </p>
           <p className="mt-3 text-sm leading-relaxed text-muted">

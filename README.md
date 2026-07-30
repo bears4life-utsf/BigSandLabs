@@ -17,12 +17,12 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Content
 
-Site copy and project cards live in `src/content/`:
+Site copy and experiment cards live in `src/content/`:
 
 - `site.ts` — brand, navigation, section copy
-- `projects.ts` — project cards (name, status, category, links)
+- `experiments.ts` — experiment cards (problem, status, category, links)
 
-Add new projects to the `projects` array; the homepage picks them up automatically.
+Add new experiments to the `experiments` array; the homepage picks them up automatically.
 
 ## Deploy
 
