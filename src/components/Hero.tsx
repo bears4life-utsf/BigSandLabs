@@ -12,8 +12,8 @@ export function Hero() {
     >
       <LandscapeBackdrop />
 
-      <div className="section-shell hero-content flex min-h-[min(92vh,48rem)] flex-col justify-end pb-16 pt-28 sm:justify-center sm:pb-24 sm:pt-28 lg:pb-28">
-        <div className="hero-panel hero-manifesto">
+      <div className="section-shell hero-content flex min-h-[min(92vh,48rem)] flex-col justify-center pb-24 pt-20 sm:pb-36 sm:pt-14 lg:pb-40 lg:pt-12">
+        <div className="hero-panel hero-manifesto -translate-y-4 sm:-translate-y-8 lg:-translate-y-10">
           <div className="reveal flex items-center gap-3">
             <BrandMark className="h-8 w-8 text-accent" />
             <p className="eyebrow">Independent software lab</p>
@@ -25,7 +25,7 @@ export function Hero() {
 
           <h1
             id="hero-heading"
-            className="reveal reveal-delay-1 mt-3 font-serif text-[2.6rem] leading-[1.02] tracking-tight text-foreground sm:text-5xl lg:text-[3.75rem]"
+            className="reveal reveal-delay-1 mt-2 font-serif text-[2.6rem] leading-[1.02] tracking-tight text-foreground sm:text-5xl lg:text-[3.75rem]"
           >
             {hero.headline}
           </h1>
@@ -51,7 +51,7 @@ export function Hero() {
 
           <ol
             aria-label="Guiding principles"
-            className="progression-track reveal reveal-delay-4 mt-16 sm:mt-20"
+            className="progression-track reveal reveal-delay-4 mt-8 sm:mt-10"
           >
             {hero.progression.map((step, index) => (
               <li key={step} className="flex items-center">

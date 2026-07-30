@@ -10,7 +10,7 @@ export function About() {
       className="section-band scroll-mt-20 py-20 sm:py-28"
     >
       <div className="section-shell grid gap-12 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:items-start lg:gap-16">
-        <div>
+        <div className="prose-measure">
           <p className="eyebrow">{about.eyebrow}</p>
           <h2
             id="about-heading"
@@ -18,14 +18,31 @@ export function About() {
           >
             {about.headline}
           </h2>
-          {about.paragraphs.map((paragraph) => (
-            <p
-              key={paragraph.slice(0, 32)}
-              className="mt-5 max-w-xl text-base leading-relaxed text-muted sm:text-lg"
-            >
-              {paragraph}
-            </p>
-          ))}
+
+          <div className="mt-8 space-y-6">
+            {about.paragraphs.map((paragraph) => {
+              if (typeof paragraph === "string") {
+                return (
+                  <p
+                    key={paragraph.slice(0, 40)}
+                    className="text-base leading-[1.7] text-muted sm:text-lg sm:leading-[1.75]"
+                  >
+                    {paragraph}
+                  </p>
+                );
+              }
+
+              return (
+                <p
+                  key={paragraph.emphasis}
+                  className="text-base leading-[1.7] text-muted sm:text-lg sm:leading-[1.75]"
+                >
+                  {paragraph.lead}
+                  <em className="about-question">{paragraph.emphasis}</em>
+                </p>
+              );
+            })}
+          </div>
         </div>
 
         <aside className="border border-border bg-background-elevated p-6 sm:p-7">

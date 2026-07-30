@@ -14,6 +14,14 @@ export type Experiment = {
 
 export const experiments: Experiment[] = [
   {
+    id: "pokescout",
+    name: "PokeScout",
+    why: "Learning Pokémon shouldn't require jumping between multiple websites to understand characters, battles, and type matchups.",
+    status: "Experiment",
+    href: "https://bears4life-utsf.github.io/PokeScout/",
+    hrefLabel: "Open PokeScout",
+  },
+  {
     id: "fairwaycast",
     name: "FairwayCast",
     why: "Weather apps tell you the forecast, but they don't answer the real question:",
@@ -21,22 +29,6 @@ export const experiments: Experiment[] = [
     status: "Experiment",
     href: "https://bears4life-utsf.github.io/FairwayCast/",
     hrefLabel: "Open FairwayCast",
-  },
-  {
-    id: "closetcast",
-    name: "ClosetCast",
-    why: "The weather tells you the temperature—but not what to wear.",
-    status: "Experiment",
-    href: "https://bears4life-utsf.github.io/ClosetCast/",
-    hrefLabel: "Open ClosetCast",
-  },
-  {
-    id: "chordframe",
-    name: "ChordFrame",
-    why: "Playing through an entire song shouldn't require stopping to scroll.",
-    status: "Experiment",
-    href: "https://bears4life-utsf.github.io/ChordFrame/",
-    hrefLabel: "Open ChordFrame",
   },
   {
     id: "payson-football",
@@ -47,12 +39,20 @@ export const experiments: Experiment[] = [
     hrefLabel: "Visit site",
   },
   {
-    id: "pokescout",
-    name: "PokeScout",
-    why: "Learning Pokémon shouldn't require jumping between multiple websites to understand characters, battles, and type matchups.",
+    id: "chordframe",
+    name: "ChordFrame",
+    why: "Playing through an entire song shouldn't require stopping to scroll.",
     status: "Experiment",
-    href: "https://bears4life-utsf.github.io/PokeScout/",
-    hrefLabel: "Open PokeScout",
+    href: "https://bears4life-utsf.github.io/ChordFrame/",
+    hrefLabel: "Open ChordFrame",
+  },
+  {
+    id: "closetcast",
+    name: "ClosetCast",
+    why: "The weather tells you the temperature—but not what to wear.",
+    status: "Experiment",
+    href: "https://bears4life-utsf.github.io/ClosetCast/",
+    hrefLabel: "Open ClosetCast",
   },
   {
     id: "timeframe",

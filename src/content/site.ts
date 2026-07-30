@@ -58,12 +58,15 @@ export const site = {
     eyebrow: "About",
     headline: "An independent software lab",
     paragraphs: [
-      "Big Sand Labs was created by Zeke Smith, a software product leader who learns best by building. It is a home for curiosity-driven experiments and the products worth sharing that grow from them.",
-      "He builds to understand problems more clearly—and to make everyday life a little simpler, clearer, or more useful.",
+      "Big Sand Labs was created by Zeke Smith, a product leader who believes the best way to understand an idea is to build it. It's home to curiosity-driven experiments and the products worth sharing that grow from them.",
+      {
+        lead: "Every experiment starts with a real problem and a simple question: ",
+        emphasis: "Could this work better?",
+      },
+      "He builds to better understand problems—and to make everyday life a little simpler, clearer, or more useful.",
     ],
     linkLabel: "Visit ZekeSmith.dev",
-    linkNote:
-      "Writing, background, and product thinking.",
+    linkNote: "Writing, background, and product thinking.",
   },
   closing: {
     headline: "What is worth exploring next?",
