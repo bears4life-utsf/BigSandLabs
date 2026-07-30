@@ -17,15 +17,6 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: "compass",
-    name: "Compass",
-    description:
-      "A personal financial operating system designed to help people understand what is about to happen with their money—whether they are financially okay today, what bills and income remain, and what decision comes next. Not traditional accounting or budgeting software; it began as a clearer, calmer way to understand personal finances.",
-    category: "Personal Finance",
-    status: "In Development",
-    accent: "#3E5C6B",
-  },
-  {
     id: "payson-football",
     name: "PaysonFootball.com",
     description:
