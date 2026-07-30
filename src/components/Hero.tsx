@@ -12,8 +12,8 @@ export function Hero() {
     >
       <LandscapeBackdrop />
 
-      <div className="section-shell hero-content flex min-h-[min(92vh,48rem)] flex-col justify-center pb-28 pt-20 sm:pb-40 sm:pt-14 lg:pb-44 lg:pt-12">
-        <div className="hero-panel hero-manifesto -translate-y-5 sm:-translate-y-9 lg:-translate-y-11">
+      <div className="section-shell hero-content flex min-h-[min(92vh,48rem)] flex-col justify-center pb-36 pt-16 sm:pb-48 sm:pt-12 lg:pb-56 lg:pt-10">
+        <div className="hero-panel hero-manifesto -translate-y-14 sm:-translate-y-20 lg:-translate-y-24">
           <div className="reveal flex items-center gap-3">
             <BrandMark className="h-8 w-8 text-accent" />
             <p className="hero-label">{hero.eyebrow}</p>
@@ -30,7 +30,7 @@ export function Hero() {
             {hero.supporting}
           </p>
 
-          <div className="reveal reveal-delay-3 mt-11 flex flex-wrap gap-3">
+          <div className="reveal reveal-delay-3 mt-8 flex flex-wrap gap-3 sm:mt-9">
             <a
               href={hero.primaryCta.href}
               className="inline-flex items-center justify-center rounded-md bg-accent px-5 py-2.5 text-sm font-medium text-background-elevated shadow-soft transition-colors hover:bg-accent-strong"
@@ -47,7 +47,7 @@ export function Hero() {
 
           <ol
             aria-label="Guiding principles"
-            className="progression-track reveal reveal-delay-4 mt-3 sm:mt-4"
+            className="progression-track reveal reveal-delay-4 mt-7 sm:mt-8"
           >
             {hero.progression.map((step, index) => (
               <li key={step} className="flex items-center">
