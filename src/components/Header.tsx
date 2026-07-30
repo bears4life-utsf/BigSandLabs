@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { BrandMark } from "@/components/BrandMark";
 import { site } from "@/content/site";
 
 export function Header() {
@@ -23,10 +24,11 @@ export function Header() {
       <div className="section-shell flex h-14 items-center justify-between gap-4 sm:h-16">
         <Link
           href="/"
-          className="shrink-0 text-[0.95rem] font-semibold tracking-tight text-foreground transition-colors hover:text-accent-strong sm:text-base"
+          className="inline-flex shrink-0 items-center gap-2.5 text-[0.95rem] font-semibold tracking-tight text-foreground transition-colors hover:text-accent-strong sm:text-base"
           onClick={() => setOpen(false)}
         >
-          {site.name}
+          <BrandMark className="h-7 w-7 text-accent" />
+          <span>{site.name}</span>
         </Link>
 
         <nav

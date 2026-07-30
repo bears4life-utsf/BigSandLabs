@@ -1,14 +1,18 @@
+import { BrandMark } from "@/components/BrandMark";
 import { site } from "@/content/site";
 
 export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="py-10 sm:py-12">
+    <footer className="border-t border-border/60 bg-[#e8e1d4]/50 py-10 sm:py-12">
       <div className="section-shell flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <p className="text-sm font-semibold text-foreground">{site.name}</p>
-          <p className="mt-2 max-w-md text-sm leading-relaxed text-muted">
+          <div className="flex items-center gap-2.5">
+            <BrandMark className="h-7 w-7 text-accent" />
+            <p className="text-sm font-semibold text-foreground">{site.name}</p>
+          </div>
+          <p className="mt-3 max-w-md text-sm leading-relaxed text-muted">
             {site.footer.tagline}
           </p>
         </div>
