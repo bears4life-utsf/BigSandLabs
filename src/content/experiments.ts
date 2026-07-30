@@ -16,6 +16,30 @@ export type Experiment = {
 
 export const experiments: Experiment[] = [
   {
+    id: "fairwaycast",
+    name: "FairwayCast",
+    problem: "I wanted a clearer answer to whether I should play golf today.",
+    capability:
+      "Check a course and tee time, then get a clear should-I-play recommendation.",
+    category: "Sports Tool",
+    status: "Experiment",
+    href: "https://bears4life-utsf.github.io/FairwayCast/",
+    hrefLabel: "Open FairwayCast",
+    accent: "#2F6B4F",
+  },
+  {
+    id: "pokescout",
+    name: "PokeScout",
+    problem: "I wanted to learn by building something fun.",
+    capability:
+      "Search Pokémon and compare types to understand matchups at a glance.",
+    category: "Learning",
+    status: "Experiment",
+    href: "https://bears4life-utsf.github.io/PokeScout/",
+    hrefLabel: "Open PokeScout",
+    accent: "#7A6B3E",
+  },
+  {
     id: "payson-football",
     name: "PaysonFootball.com",
     problem: "Our football program deserved a better website.",
@@ -50,29 +74,5 @@ export const experiments: Experiment[] = [
     href: "https://bears4life-utsf.github.io/ChordFrame/",
     hrefLabel: "Open ChordFrame",
     accent: "#6B5E4E",
-  },
-  {
-    id: "fairwaycast",
-    name: "FairwayCast",
-    problem: "I wanted a clearer answer to whether I should play golf today.",
-    capability:
-      "Check a course and tee time, then get a clear should-I-play recommendation.",
-    category: "Sports Tool",
-    status: "Experiment",
-    href: "https://bears4life-utsf.github.io/FairwayCast/",
-    hrefLabel: "Open FairwayCast",
-    accent: "#2F6B4F",
-  },
-  {
-    id: "pokescout",
-    name: "PokeScout",
-    problem: "I wanted to learn by building something fun.",
-    capability:
-      "Search Pokémon and compare types to understand matchups at a glance.",
-    category: "Learning",
-    status: "Experiment",
-    href: "https://bears4life-utsf.github.io/PokeScout/",
-    hrefLabel: "Open PokeScout",
-    accent: "#7A6B3E",
   },
 ];
