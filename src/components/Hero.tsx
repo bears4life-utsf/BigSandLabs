@@ -16,10 +16,10 @@ export function Hero() {
         <div className="hero-panel hero-manifesto -translate-y-4 sm:-translate-y-8 lg:-translate-y-10">
           <div className="reveal flex items-center gap-3">
             <BrandMark className="h-8 w-8 text-accent" />
-            <p className="eyebrow">Independent software lab</p>
+            <p className="hero-label">{hero.eyebrow}</p>
           </div>
 
-          <p className="reveal reveal-delay-1 mt-8 font-serif text-lg tracking-tight text-foreground/80 sm:text-xl">
+          <p className="reveal reveal-delay-1 mt-7 font-serif text-lg tracking-tight text-foreground/80 sm:text-xl">
             {hero.brand}
           </p>
 

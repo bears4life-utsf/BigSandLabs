@@ -6,7 +6,7 @@ export function Closing() {
   return (
     <section
       aria-labelledby="closing-heading"
-      className="section-paper py-20 sm:py-28"
+      className="section-paper py-24 sm:py-32"
     >
       <div className="section-shell">
         <div className="prose-measure">
@@ -16,25 +16,18 @@ export function Closing() {
           >
             {closing.headline}
           </h2>
-          <p className="mt-5 text-base leading-relaxed text-muted sm:text-lg">
+          <p className="mt-6 max-w-xl text-base leading-[1.7] text-muted sm:text-lg sm:leading-[1.75]">
             {closing.supporting}
           </p>
-          <div className="mt-10 flex flex-wrap gap-3">
-            <a
-              href={closing.primaryCta.href}
-              className="inline-flex items-center justify-center rounded-md bg-accent px-5 py-2.5 text-sm font-medium text-background-elevated transition-colors hover:bg-accent-strong"
-            >
-              {closing.primaryCta.label}
-            </a>
-            <a
-              href={closing.secondaryCta.href}
-              className="inline-flex items-center justify-center rounded-md border border-border-strong bg-background-elevated/80 px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-accent hover:text-accent-strong"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              {closing.secondaryCta.label}
-            </a>
-          </div>
+          <a
+            href={closing.cta.href}
+            className="mt-12 inline-flex items-center text-[0.95rem] font-semibold text-accent transition-colors hover:text-accent-strong"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            {closing.cta.label}
+            <span aria-hidden="true"> →</span>
+          </a>
         </div>
       </div>
     </section>

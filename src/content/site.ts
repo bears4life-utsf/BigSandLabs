@@ -15,6 +15,7 @@ export const site = {
     { label: "About", href: "#about" },
   ],
   hero: {
+    eyebrow: "Curiosity-Driven Software",
     brand: "Big Sand Labs",
     headline: "Build What Matters.",
     supporting:
@@ -63,17 +64,16 @@ export const site = {
         lead: "Every experiment starts with a real problem and a simple question: ",
         emphasis: "Could this work better?",
       },
-      "He builds to better understand problems—and to make everyday life a little simpler, clearer, or more useful.",
+      "Building is a way to better understand problems—and to make everyday life a little simpler, clearer, or more useful.",
     ],
     linkLabel: "Visit ZekeSmith.dev",
     linkNote: "Writing, background, and product thinking.",
   },
   closing: {
-    headline: "What is worth exploring next?",
+    headline: "Beyond the Lab",
     supporting:
-      "New work appears here as curiosity becomes an experiment—and as the most useful experiments become products worth sharing.",
-    primaryCta: { label: "View experiments", href: "#experiments" },
-    secondaryCta: {
+      "Big Sand Labs is where I explore ideas by building. ZekeSmith.dev is where I explore them through writing, leadership, and product thinking.",
+    cta: {
       label: "Visit ZekeSmith.dev",
       href: "https://zekesmith.dev",
     },
