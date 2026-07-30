@@ -52,7 +52,7 @@ export const site = {
     eyebrow: "Experiments",
     headline: "On the workbench",
     intro:
-      "Every experiment begins with an observation. Some are still being explored. Others are Live—products worth sharing that we maintain and recommend.",
+      "Every experiment begins with an observation. The cards below share why each one exists—open one to read the full story.",
   },
   process: {
     eyebrow: "How ideas move",

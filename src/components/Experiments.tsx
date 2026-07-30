@@ -25,7 +25,7 @@ export function Experiments() {
           </p>
         </div>
 
-        <ul className="mt-14 grid gap-5 md:grid-cols-2">
+        <ul className="mt-16 grid gap-6 md:grid-cols-2">
           {experiments.map((experiment) => (
             <li key={experiment.id}>
               <ExperimentCard experiment={experiment} />

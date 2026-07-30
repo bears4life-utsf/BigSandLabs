@@ -1,25 +1,31 @@
-import type { Experiment } from "@/content/experiments";
+import type { Experiment, ExperimentStatus } from "@/content/experiments";
 
 type ExperimentCardProps = {
   experiment: Experiment;
 };
+
+function statusClass(status: ExperimentStatus) {
+  return status === "Live"
+    ? "experiment-status-chip experiment-status-live"
+    : "experiment-status-chip experiment-status-experiment";
+}
 
 export function ExperimentCard({ experiment }: ExperimentCardProps) {
   const content = (
     <>
       <div className="experiment-heading">
         <h3 className="experiment-name">{experiment.name}</h3>
-        <span className="experiment-status-chip">{experiment.status}</span>
+        <span className={statusClass(experiment.status)}>
+          {experiment.status}
+        </span>
       </div>
 
-      <div className="experiment-story">
-        <p className="experiment-observation">{experiment.observation}</p>
-        {experiment.observationHighlight ? (
-          <p className="experiment-observation-highlight">
-            {experiment.observationHighlight}
-          </p>
+      <div className="experiment-why">
+        <h4 className="experiment-why-label">Why it exists</h4>
+        <p className="experiment-why-text">{experiment.why}</p>
+        {experiment.whyHighlight ? (
+          <p className="experiment-why-highlight">{experiment.whyHighlight}</p>
         ) : null}
-        <p className="experiment-exploration">{experiment.exploration}</p>
       </div>
 
       {experiment.href ? (
