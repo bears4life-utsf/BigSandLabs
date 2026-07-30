@@ -311,10 +311,11 @@ body {
   display: inline-flex;
   align-items: center;
   border-radius: 999px;
-  border: 1px solid rgba(36, 31, 26, 0.07);
-  background: rgba(250, 247, 241, 0.32);
-  padding: 0.22rem 0.65rem;
-  font-size: 0.78rem;
+  border: 1px solid rgba(36, 31, 26, 0.11);
+  background: rgba(250, 247, 241, 0.58);
+  padding: 0.28rem 0.72rem;
+  font-size: 0.8rem;
+  font-weight: 500;
   letter-spacing: 0.02em;
   line-height: 1.2;
   color: var(--foreground);
@@ -325,23 +326,23 @@ body {
   align-items: center;
   justify-content: center;
   width: 0.9rem;
-  height: 1.35rem;
+  height: 1.45rem;
   font-size: 0.48rem;
   font-weight: 400;
   line-height: 1;
-  color: rgba(53, 88, 104, 0.2);
+  color: rgba(53, 88, 104, 0.22);
 }
 
 @media (min-width: 640px) {
   .progression-connector {
     width: 1.2rem;
-    height: 1.45rem;
+    height: 1.55rem;
     font-size: 0.52rem;
   }
 
   .progression-step {
-    font-size: 0.8125rem;
-    padding: 0.24rem 0.7rem;
+    font-size: 0.84rem;
+    padding: 0.3rem 0.78rem;
   }
 }
 
