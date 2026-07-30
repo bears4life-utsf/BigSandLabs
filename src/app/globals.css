@@ -279,8 +279,54 @@ body {
   }
 }
 
-.hero-statement {
-  letter-spacing: -0.01em;
+.progression-track {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.15rem;
+}
+
+.progression-step {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  border-radius: 999px;
+  border: 1px solid rgba(36, 31, 26, 0.14);
+  background: rgba(250, 247, 241, 0.72);
+  backdrop-filter: blur(8px);
+  padding: 0.4rem 0.85rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.01em;
+  color: var(--foreground);
+  box-shadow: 0 1px 2px rgba(36, 31, 26, 0.04);
+}
+
+.progression-index {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+
+.progression-connector {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.15rem;
+  font-size: 0.62rem;
+  line-height: 1;
+  color: rgba(53, 88, 104, 0.4);
+}
+
+@media (min-width: 640px) {
+  .progression-connector {
+    width: 1.75rem;
+    font-size: 0.68rem;
+  }
+
+  .progression-step {
+    font-size: 0.9rem;
+  }
 }
 
 .section-paper {

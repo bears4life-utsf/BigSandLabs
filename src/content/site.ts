@@ -2,7 +2,7 @@ export const site = {
   name: "Big Sand Labs",
   title: "Big Sand Labs — Build What Matters",
   description:
-    "Big Sand Labs exists because the best software starts with curiosity. Every experiment begins with a simple observation. The best become products worth sharing.",
+    "Big Sand Labs exists because the best software starts with curiosity.",
   url: "https://bears4life-utsf.github.io/BigSandLabs",
   founder: {
     name: "Zeke Smith",
@@ -19,10 +19,9 @@ export const site = {
     headline: "Build What Matters.",
     supporting:
       "Big Sand Labs exists because the best software starts with curiosity.",
-    primaryCta: { label: "Explore the experiments", href: "#experiments" },
-    secondaryCta: { label: "Read our philosophy", href: "#philosophy" },
-    statement:
-      "Every experiment begins with a simple observation. The best become products worth sharing.",
+    primaryCta: { label: "Explore Experiments", href: "#experiments" },
+    secondaryCta: { label: "Why Big Sand Labs?", href: "#philosophy" },
+    progression: ["Observe", "Experiment", "Share"] as const,
   },
   philosophy: {
     eyebrow: "Philosophy",
