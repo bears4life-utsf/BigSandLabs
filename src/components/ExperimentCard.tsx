@@ -14,9 +14,20 @@ export function ExperimentCard({ experiment }: ExperimentCardProps) {
 
       <h3 className="experiment-name">{experiment.name}</h3>
 
-      <p className="experiment-problem">{experiment.problem}</p>
+      <div className="experiment-note">
+        <p className="experiment-note-label">Observation</p>
+        <p className="experiment-observation">{experiment.observation}</p>
+        {experiment.observationHighlight ? (
+          <p className="experiment-observation-highlight">
+            {experiment.observationHighlight}
+          </p>
+        ) : null}
+      </div>
 
-      <p className="experiment-capability">{experiment.capability}</p>
+      <div className="experiment-note experiment-note-exploration">
+        <p className="experiment-note-label">Experiment</p>
+        <p className="experiment-exploration">{experiment.exploration}</p>
+      </div>
 
       {experiment.href ? (
         <p className="experiment-link">

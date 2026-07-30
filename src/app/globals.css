@@ -392,10 +392,8 @@ body {
 
 .experiment-meta {
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 0.35rem 1rem;
+  flex-direction: column;
+  gap: 0.35rem;
 }
 
 .experiment-category,
@@ -416,7 +414,7 @@ body {
 }
 
 .experiment-name {
-  margin-top: 1.15rem;
+  margin-top: 1.25rem;
   font-family: var(--font-serif), ui-serif, Georgia, serif;
   font-size: 1.65rem;
   line-height: 1.15;
@@ -424,19 +422,45 @@ body {
   color: var(--foreground);
 }
 
-.experiment-problem {
+.experiment-note {
+  margin-top: 1.35rem;
+}
+
+.experiment-note-exploration {
   margin-top: 1.15rem;
+  flex: 1;
+}
+
+.experiment-note-label {
+  margin: 0 0 0.45rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--stone);
+}
+
+.experiment-observation {
+  margin: 0;
   font-family: var(--font-serif), ui-serif, Georgia, serif;
-  font-size: 1.12rem;
-  line-height: 1.4;
+  font-size: 1.08rem;
+  line-height: 1.45;
   color: var(--foreground);
 }
 
-.experiment-capability {
-  margin-top: 0.85rem;
-  flex: 1;
+.experiment-observation-highlight {
+  margin: 0.65rem 0 0;
+  font-family: var(--font-serif), ui-serif, Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--foreground);
+}
+
+.experiment-exploration {
+  margin: 0;
   font-size: 0.95rem;
-  line-height: 1.55;
+  line-height: 1.6;
   color: var(--muted);
 }
 

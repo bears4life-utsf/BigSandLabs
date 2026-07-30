@@ -52,7 +52,7 @@ export const site = {
     eyebrow: "Experiments",
     headline: "On the workbench",
     intro:
-      "Some are still Experiments—ideas we are actively exploring. Others are Live—products worth sharing that we maintain and recommend.",
+      "Every experiment begins with an observation. Some are still being explored. Others are Live—products worth sharing that we maintain and recommend.",
   },
   process: {
     eyebrow: "How ideas move",

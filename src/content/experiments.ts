@@ -3,10 +3,12 @@ export type ExperimentStatus = "Experiment" | "Live";
 export type Experiment = {
   id: string;
   name: string;
-  /** One-sentence origin story — why it exists. */
-  problem: string;
-  /** One concrete sentence — what someone can do with it. */
-  capability: string;
+  /** What was noticed — the beginning of the story. */
+  observation: string;
+  /** Optional emphasized line within the observation. */
+  observationHighlight?: string;
+  /** The exploration — how we attempt a better solution. */
+  exploration: string;
   category: string;
   status: ExperimentStatus;
   href?: string;
@@ -18,9 +20,11 @@ export const experiments: Experiment[] = [
   {
     id: "fairwaycast",
     name: "FairwayCast",
-    problem: "I wanted a clearer answer to whether I should play golf today.",
-    capability:
-      "Check a course and tee time, then get a clear should-I-play recommendation.",
+    observation:
+      "Weather apps tell you the forecast, but they don't answer the real question:",
+    observationHighlight: "Should I play golf today?",
+    exploration:
+      "Combine weather conditions into a simple recommendation that helps golfers decide whether to play and what to expect on the course.",
     category: "Sports Tool",
     status: "Experiment",
     href: "https://bears4life-utsf.github.io/FairwayCast/",
@@ -30,9 +34,10 @@ export const experiments: Experiment[] = [
   {
     id: "pokescout",
     name: "PokeScout",
-    problem: "I wanted to learn by building something fun.",
-    capability:
-      "Search Pokémon and compare types to understand matchups at a glance.",
+    observation:
+      "Learning Pokémon alongside my kids meant constantly searching for information about characters, battles, and type matchups.",
+    exploration:
+      "Create a simple reference that makes it easy to explore Pokémon, understand strengths and weaknesses, and discover information more quickly.",
     category: "Learning",
     status: "Experiment",
     href: "https://bears4life-utsf.github.io/PokeScout/",
@@ -42,9 +47,10 @@ export const experiments: Experiment[] = [
   {
     id: "payson-football",
     name: "PaysonFootball.com",
-    problem: "Our football program deserved a better website.",
-    capability:
-      "Find schedules, coaches, announcements, and team information in one place.",
+    observation:
+      "Following youth football shouldn't require searching multiple places for schedules, locations, weather, and team information—especially for families with multiple players.",
+    exploration:
+      "Bring schedules, teams, maps, weather, and parent resources together into one simple destination.",
     category: "Community Software",
     status: "Live",
     href: "https://paysonfootball.com",
@@ -54,9 +60,10 @@ export const experiments: Experiment[] = [
   {
     id: "timeframe",
     name: "TimeFrame",
-    problem: "I wanted a simpler way to explore what happened in a given year.",
-    capability:
-      "Enter a year and browse the events that shaped that moment in history.",
+    observation:
+      "Historical events and notable birthdays are scattered across different sources, making it difficult to see what makes a particular day interesting.",
+    exploration:
+      "Combine multiple APIs into a single timeline that turns any date into a window through history.",
     category: "History Tool",
     status: "Experiment",
     href: "https://bears4life-utsf.github.io/TimeFrame/",
@@ -66,9 +73,10 @@ export const experiments: Experiment[] = [
   {
     id: "chordframe",
     name: "ChordFrame",
-    problem: "I got tired of scrolling through chord sheets while playing.",
-    capability:
-      "View songs in a clean multi-column layout designed to stay visible while you play.",
+    observation:
+      "Playing guitar shouldn't require constantly scrolling through chord sheets and taking a hand off the instrument.",
+    exploration:
+      "Display chords and lyrics in a clean multi-column layout so an entire song stays visible while you play.",
     category: "Music Tool",
     status: "Experiment",
     href: "https://bears4life-utsf.github.io/ChordFrame/",
