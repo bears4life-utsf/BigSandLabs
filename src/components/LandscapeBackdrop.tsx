@@ -35,7 +35,7 @@ export function LandscapeBackdrop() {
           stroke="currentColor"
           strokeWidth="1.1"
         />
-        <circle className="ridge-sun" cx="1180" cy="168" r="47" />
+        <circle className="ridge-sun" cx="1180" cy="168" r="53" />
       </svg>
     </div>
   );
