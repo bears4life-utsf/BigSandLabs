@@ -17,8 +17,7 @@ export const site = {
   hero: {
     eyebrow: "Curiosity-Driven Software",
     headline: "Build What Matters.",
-    supporting:
-      "Big Sand Labs exists because the best software starts with curiosity.",
+    supporting: "Every experiment begins with a simple observation.",
     primaryCta: { label: "Explore Experiments", href: "#experiments" },
     secondaryCta: { label: "Why Big Sand Labs?", href: "#philosophy" },
     progression: ["Observe", "Experiment", "Share"] as const,
@@ -27,14 +26,12 @@ export const site = {
     eyebrow: "Philosophy",
     headline: "Curiosity leads. Usefulness decides.",
     intro:
-      "We notice everyday problems, explore them by building, and share what proves genuinely useful.",
-    guidingPrinciple:
-      "Curiosity → Experiment → Product worth sharing.",
+      "Every experiment begins with a simple observation. Explore ideas by building and share what proves genuinely useful.",
     principles: [
       {
         title: "See Opportunities",
         description:
-          "Pay attention to the small problems we encounter every day. Ask questions. Stay curious. The best ideas often begin with something most people simply learn to live with.",
+          "Pay attention to the everyday problems people simply learn to live with. Ask questions. Stay curious. The best ideas often begin there.",
       },
       {
         title: "Explore Solutions",

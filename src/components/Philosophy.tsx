@@ -35,12 +35,6 @@ export function Philosophy() {
             </li>
           ))}
         </ul>
-
-        <blockquote className="philosophy-callout mt-16 max-w-3xl">
-          <p className="font-serif text-xl leading-snug text-foreground sm:text-2xl">
-            {philosophy.guidingPrinciple}
-          </p>
-        </blockquote>
       </div>
     </section>
   );
