@@ -29,7 +29,7 @@ export const site = {
       "Big Sand Labs is where Zeke S. Smith explores ideas through software. Every experiment begins with a real problem, a simple question, and a willingness to learn. Some experiments remain experiments. The most useful ideas become products worth sharing.",
     ],
     linkLabel: "Visit ZekeSmith.dev",
-    linkNote: "Writing, background, and product thinking.",
+    linkNote: "Product leader, builder, and writer.",
   },
   philosophy: {
     eyebrow: "Philosophy",
@@ -56,15 +56,6 @@ export const site = {
     headline: "Built from Curiosity",
     intro:
       "Ideas become experiments. The best ones become products worth sharing.",
-  },
-  closing: {
-    headline: "Beyond the Lab",
-    supporting:
-      "Big Sand Labs is where I continue learning through experimentation. ZekeSmith.dev is where I share what I've learned throughout my career—through writing, interactive tools, and practical frameworks for product leaders.",
-    cta: {
-      label: "Visit ZekeSmith.dev",
-      href: "https://zekesmith.dev",
-    },
   },
   footer: {
     tagline: "Curiosity. Experiment. Product worth sharing.",

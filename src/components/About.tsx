@@ -7,7 +7,7 @@ export function About() {
     <section
       id="about"
       aria-labelledby="about-heading"
-      className="section-band scroll-mt-20 py-20 sm:py-28"
+      className="section-band scroll-mt-20 pt-20 pb-24 sm:pt-28 sm:pb-32"
     >
       <div className="section-shell grid gap-12 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:items-start lg:gap-16">
         <div className="prose-measure">

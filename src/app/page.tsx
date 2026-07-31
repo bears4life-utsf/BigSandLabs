@@ -1,5 +1,4 @@
 import { About } from "@/components/About";
-import { Closing } from "@/components/Closing";
 import { Experiments } from "@/components/Experiments";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -17,7 +16,6 @@ export default function Home() {
           <Philosophy />
           <Experiments />
           <About />
-          <Closing />
         </main>
         <Footer />
       </div>
