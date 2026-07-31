@@ -26,7 +26,7 @@ export const site = {
     eyebrow: "Built from Curiosity",
     headline: "About Big Sand Labs",
     paragraphs: [
-      "Big Sand Labs is where Zeke S. Smith explores ideas through software. Every experiment begins with a real problem, a simple question, and a willingness to learn. Some experiments remain experiments. The most useful ideas become products worth sharing.",
+      "Big Sand Labs is where ideas are explored through software. Every experiment begins with a real problem, a simple question, and a willingness to learn. Some experiments remain experiments. The most useful ideas become products worth sharing.",
     ],
     linkLabel: "Visit ZekeSmith.dev",
     linkNote: "Product leader, builder, and writer.",
