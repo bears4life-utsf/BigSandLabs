@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Figtree, Source_Serif_4 } from "next/font/google";
 import { site } from "@/content/site";
+import { THEME_BOOTSTRAP_SCRIPT } from "@/lib/theme";
 import "./globals.css";
 
 const figtree = Figtree({
@@ -53,8 +54,11 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#f4f0e8",
-  colorScheme: "light",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f4f0e8" },
+    { media: "(prefers-color-scheme: dark)", color: "#1a2230" },
+  ],
+  colorScheme: "light dark",
 };
 
 export default function RootLayout({
@@ -66,7 +70,13 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${figtree.variable} ${sourceSerif.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{ __html: THEME_BOOTSTRAP_SCRIPT }}
+        />
+      </head>
       <body className="min-h-full bg-background font-sans text-foreground">
         <a href="#main" className="skip-link">
           Skip to content
