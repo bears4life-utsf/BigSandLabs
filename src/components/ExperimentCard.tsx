@@ -21,22 +21,9 @@ export function ExperimentCard({ experiment }: ExperimentCardProps) {
       />
 
       <div className="experiment-why">
-        {experiment.why.map((line, index) =>
-          line === "" ? (
-            <span
-              key={`break-${index}`}
-              className="experiment-why-break"
-              aria-hidden="true"
-            />
-          ) : (
-            <p key={`${line}-${index}`} className="experiment-why-line">
-              {line}
-            </p>
-          ),
-        )}
-        {experiment.whyHighlight ? (
-          <p className="experiment-why-highlight">{experiment.whyHighlight}</p>
-        ) : null}
+        <p className="experiment-why-line">{experiment.whySetup}</p>
+        <p className="experiment-why-line">{experiment.whySupport}</p>
+        <p className="experiment-why-highlight">{experiment.whyHighlight}</p>
       </div>
 
       {experiment.href ? (
