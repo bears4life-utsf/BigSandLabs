@@ -23,13 +23,13 @@ export function Philosophy() {
           </p>
         </div>
 
-        <ul className="mt-14 grid gap-4 sm:grid-cols-3 sm:gap-5">
+        <ul className="philosophy-columns mt-14 sm:mt-16">
           {philosophy.principles.map((principle) => (
-            <li key={principle.title} className="principle-card">
-              <h3 className="font-serif text-2xl leading-tight text-foreground">
+            <li key={principle.title} className="philosophy-column">
+              <h3 className="font-serif text-2xl leading-tight tracking-tight text-foreground sm:text-[1.65rem]">
                 {principle.title}
               </h3>
-              <p className="mt-4 text-sm leading-relaxed text-muted sm:text-[0.95rem]">
+              <p className="mt-4 max-w-xs text-base leading-[1.65] text-muted">
                 {principle.description}
               </p>
             </li>

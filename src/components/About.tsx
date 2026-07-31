@@ -19,7 +19,7 @@ export function About() {
             {about.headline}
           </h2>
 
-          <div className="mt-8 space-y-6">
+          <div className="mt-8">
             {about.paragraphs.map((paragraph) => (
               <p
                 key={paragraph.slice(0, 40)}

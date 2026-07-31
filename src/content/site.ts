@@ -10,9 +10,9 @@ export const site = {
     siteUrl: "https://zekesmith.dev",
   },
   nav: [
-    { label: "Experiments", href: "#experiments" },
-    { label: "Philosophy", href: "#philosophy" },
     { label: "About", href: "#about" },
+    { label: "Philosophy", href: "#philosophy" },
+    { label: "Experiments", href: "#experiments" },
   ],
   hero: {
     eyebrow: "Curiosity-Driven Software",
@@ -22,26 +22,34 @@ export const site = {
     secondaryCta: { label: "Why Big Sand Labs?", href: "#philosophy" },
     progression: ["Observe", "Experiment", "Share"] as const,
   },
+  about: {
+    eyebrow: "About",
+    headline: "An independent software lab",
+    paragraphs: [
+      "Big Sand Labs was created by Zeke S. Smith as a place to explore ideas through experimentation. Every experiment begins with a real problem, a simple question, and a willingness to learn. The most useful ideas become products worth sharing.",
+    ],
+    linkLabel: "Visit ZekeSmith.dev",
+    linkNote: "Writing, background, and product thinking.",
+  },
   philosophy: {
     eyebrow: "Philosophy",
     headline: "Curiosity leads. Usefulness decides.",
-    intro:
-      "Every experiment begins with a simple observation. Explore ideas by building and share what proves genuinely useful.",
+    intro: "Explore ideas by building. Share what proves genuinely useful.",
     principles: [
       {
-        title: "See Opportunities",
+        title: "Observe",
         description:
-          "Pay attention to the everyday problems people simply learn to live with. Ask questions. Stay curious. The best ideas often begin there.",
+          "Pay attention to the everyday problems people simply learn to live with.",
       },
       {
-        title: "Explore Solutions",
+        title: "Experiment",
         description:
-          "Learn by creating. Start small. Improve incrementally. Building isn't the goal—understanding is. Every experiment teaches something, whether it becomes a product or not.",
+          "Build to understand. Start small. Every experiment teaches something.",
       },
       {
-        title: "Share What Works",
+        title: "Share",
         description:
-          "When something proves genuinely useful, put it into the world. Sometimes that means a free tool. Sometimes it's open source. Sometimes it's a product worth paying for. What matters is helping people by sharing solutions that make life a little better.",
+          "When something proves genuinely useful, share it.",
       },
     ],
   },
@@ -49,17 +57,7 @@ export const site = {
     eyebrow: "Experiments",
     headline: "On the workbench",
     intro:
-      "Every experiment begins with an observation. The cards below share why each one exists—open one to read the full story.",
-  },
-  about: {
-    eyebrow: "About",
-    headline: "An independent software lab",
-    paragraphs: [
-      "Big Sand Labs was created by Zeke S. Smith as a place to explore ideas through experimentation. Every experiment begins with a real problem, a simple question, and a willingness to build in order to learn. The most useful ideas become products worth sharing.",
-      "Building is a way to better understand problems—and to make everyday life a little simpler, clearer, or more useful.",
-    ],
-    linkLabel: "Visit ZekeSmith.dev",
-    linkNote: "Writing, background, and product thinking.",
+      "Open one to explore why it exists—and what it became.",
   },
   closing: {
     headline: "Beyond the Lab",

@@ -347,28 +347,27 @@ body {
   border-block: 1px solid var(--border);
 }
 
-.principle-card {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  border-top: 2px solid var(--accent);
-  background: var(--background-elevated);
-  padding: 1.5rem 1.35rem 1.6rem;
-  box-shadow: var(--shadow-soft);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+.philosophy-columns {
+  display: grid;
+  gap: 2.5rem 0;
 }
 
-.principle-card:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-hover);
+@media (min-width: 640px) {
+  .philosophy-columns {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0 2.5rem;
+  }
 }
 
-.principle-card:nth-child(2) {
-  border-top-color: var(--sage);
+.philosophy-column {
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
 }
 
-.principle-card:nth-child(3) {
-  border-top-color: var(--rust);
+@media (min-width: 640px) {
+  .philosophy-column {
+    padding-top: 1.5rem;
+  }
 }
 
 .experiment-card {
@@ -539,10 +538,6 @@ body {
   .reveal-delay-3,
   .reveal-delay-4 {
     animation: none;
-  }
-
-  .principle-card:hover {
-    transform: none;
   }
 
   .landscape-water,
