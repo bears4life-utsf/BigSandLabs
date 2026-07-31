@@ -5,7 +5,7 @@ export const site = {
     "Big Sand Labs exists because the best software starts with curiosity.",
   url: "https://bears4life-utsf.github.io/BigSandLabs",
   founder: {
-    name: "Zeke Smith",
+    name: "Zeke S. Smith",
     siteLabel: "ZekeSmith.dev",
     siteUrl: "https://zekesmith.dev",
   },
@@ -55,11 +55,7 @@ export const site = {
     eyebrow: "About",
     headline: "An independent software lab",
     paragraphs: [
-      "Big Sand Labs was created by Zeke Smith, a product leader who believes the best way to understand an idea is to build it. It's home to curiosity-driven experiments and the products worth sharing that grow from them.",
-      {
-        lead: "Every experiment starts with a real problem and a simple question: ",
-        emphasis: "Could this work better?",
-      },
+      "Big Sand Labs was created by Zeke S. Smith as a place to explore ideas through experimentation. Every experiment begins with a real problem, a simple question, and a willingness to build in order to learn. The most useful ideas become products worth sharing.",
       "Building is a way to better understand problems—and to make everyday life a little simpler, clearer, or more useful.",
     ],
     linkLabel: "Visit ZekeSmith.dev",

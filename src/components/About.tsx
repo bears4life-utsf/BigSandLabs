@@ -20,28 +20,14 @@ export function About() {
           </h2>
 
           <div className="mt-8 space-y-6">
-            {about.paragraphs.map((paragraph) => {
-              if (typeof paragraph === "string") {
-                return (
-                  <p
-                    key={paragraph.slice(0, 40)}
-                    className="text-base leading-[1.7] text-muted sm:text-lg sm:leading-[1.75]"
-                  >
-                    {paragraph}
-                  </p>
-                );
-              }
-
-              return (
-                <p
-                  key={paragraph.emphasis}
-                  className="text-base leading-[1.7] text-muted sm:text-lg sm:leading-[1.75]"
-                >
-                  {paragraph.lead}
-                  <em className="about-question">{paragraph.emphasis}</em>
-                </p>
-              );
-            })}
+            {about.paragraphs.map((paragraph) => (
+              <p
+                key={paragraph.slice(0, 40)}
+                className="text-base leading-[1.7] text-muted sm:text-lg sm:leading-[1.75]"
+              >
+                {paragraph}
+              </p>
+            ))}
           </div>
         </div>
 

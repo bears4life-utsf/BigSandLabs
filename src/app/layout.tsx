@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     "independent software",
     "AI tools",
     "product experiments",
-    "Zeke Smith",
+    "Zeke S. Smith",
   ],
   openGraph: {
     type: "website",
