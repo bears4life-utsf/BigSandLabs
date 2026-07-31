@@ -11,8 +11,8 @@ export function createExplorerDogVariant() {
   return {
     direction: pickDirection(),
     lane: 0.14 + Math.random() * 0.2,
-    durationMs: 8200 + Math.floor(Math.random() * 1600),
-    pauseMs: 1100 + Math.floor(Math.random() * 400),
+    durationMs: 15500 + Math.floor(Math.random() * 3500),
+    pauseMs: 1600 + Math.floor(Math.random() * 700),
   };
 }
 

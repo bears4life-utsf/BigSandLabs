@@ -11,8 +11,8 @@ export function createUfoFlyoverVariant() {
   return {
     direction: pickDirection(),
     lane: 0.12 + Math.random() * 0.16,
-    durationMs: 5200 + Math.floor(Math.random() * 1800),
-    pauseMs: 700 + Math.floor(Math.random() * 500),
+    durationMs: 10000 + Math.floor(Math.random() * 2500),
+    pauseMs: 1100 + Math.floor(Math.random() * 600),
   };
 }
 

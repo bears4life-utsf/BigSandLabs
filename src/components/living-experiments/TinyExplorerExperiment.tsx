@@ -11,8 +11,8 @@ export function createTinyExplorerVariant() {
   return {
     direction: pickDirection(),
     lane: 0.18 + Math.random() * 0.22,
-    durationMs: 7200 + Math.floor(Math.random() * 1800),
-    pauseMs: 900 + Math.floor(Math.random() * 500),
+    durationMs: 14000 + Math.floor(Math.random() * 3000),
+    pauseMs: 1400 + Math.floor(Math.random() * 700),
   };
 }
 
