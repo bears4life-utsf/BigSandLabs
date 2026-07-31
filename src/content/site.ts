@@ -10,9 +10,9 @@ export const site = {
     siteUrl: "https://zekesmith.dev",
   },
   nav: [
-    { label: "About", href: "#about" },
     { label: "Philosophy", href: "#philosophy" },
     { label: "Experiments", href: "#experiments" },
+    { label: "About", href: "#about" },
   ],
   hero: {
     eyebrow: "Curiosity-Driven Software",
