@@ -15,17 +15,28 @@ export function ExperimentCard({ experiment }: ExperimentCardProps) {
 
       <h3 className="experiment-name">{experiment.name}</h3>
 
-      <div className="experiment-body">
-        <ExperimentIllustrationMark
-          kind={experiment.illustration}
-          className="experiment-illustration"
-        />
-        <div className="experiment-why">
-          <p className="experiment-why-text">{experiment.why}</p>
-          {experiment.whyHighlight ? (
-            <p className="experiment-why-highlight">{experiment.whyHighlight}</p>
-          ) : null}
-        </div>
+      <ExperimentIllustrationMark
+        kind={experiment.illustration}
+        className={`experiment-illustration experiment-illustration--${experiment.illustration}`}
+      />
+
+      <div className="experiment-why">
+        {experiment.why.map((line, index) =>
+          line === "" ? (
+            <span
+              key={`break-${index}`}
+              className="experiment-why-break"
+              aria-hidden="true"
+            />
+          ) : (
+            <p key={`${line}-${index}`} className="experiment-why-line">
+              {line}
+            </p>
+          ),
+        )}
+        {experiment.whyHighlight ? (
+          <p className="experiment-why-highlight">{experiment.whyHighlight}</p>
+        ) : null}
       </div>
 
       {experiment.href ? (

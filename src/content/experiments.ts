@@ -20,9 +20,12 @@ export type Experiment = {
   id: string;
   catalogId: string;
   name: string;
-  /** Short curiosity hook — why this experiment exists. */
-  why: string;
-  /** Optional emphasized follow-up line. */
+  /**
+   * Editorial statement lines.
+   * Empty string = intentional vertical pause between groups.
+   */
+  why: string[];
+  /** Optional emphasized closing line (e.g. FairwayCast). */
   whyHighlight?: string;
   status: ExperimentStatus;
   accent: ExperimentAccent;
@@ -36,7 +39,16 @@ export const experiments: Experiment[] = [
     id: "pokescout",
     catalogId: "EXP-001",
     name: "PokeScout",
-    why: "Learning Pokémon shouldn't require jumping between multiple websites to understand characters, battles, and type matchups.",
+    why: [
+      "Learning Pokémon shouldn't require",
+      "jumping between multiple websites.",
+      "",
+      "Characters.",
+      "Battles.",
+      "Type matchups.",
+      "",
+      "One place.",
+    ],
     status: "Experiment",
     accent: "gold",
     illustration: "pokescout",
@@ -47,7 +59,10 @@ export const experiments: Experiment[] = [
     id: "fairwaycast",
     catalogId: "EXP-002",
     name: "FairwayCast",
-    why: "Weather apps tell you the forecast, but they don't answer the real question:",
+    why: [
+      "Weather apps tell you the forecast.",
+      "They don't answer the real question:",
+    ],
     whyHighlight: "Should I play golf today?",
     status: "Experiment",
     accent: "golf",
@@ -59,7 +74,17 @@ export const experiments: Experiment[] = [
     id: "payson-football",
     catalogId: "EXP-003",
     name: "Payson Football",
-    why: "Following youth football shouldn't require searching multiple places for schedules, locations, weather, and team information—especially for families with multiple players.",
+    why: [
+      "Following youth football shouldn't require",
+      "searching multiple places.",
+      "",
+      "Schedules.",
+      "Locations.",
+      "Weather.",
+      "Team information.",
+      "",
+      "Especially with multiple players.",
+    ],
     status: "Live",
     accent: "payson",
     illustration: "payson-football",
@@ -70,7 +95,10 @@ export const experiments: Experiment[] = [
     id: "chordframe",
     catalogId: "EXP-004",
     name: "ChordFrame",
-    why: "Playing through an entire song shouldn't require stopping to scroll.",
+    why: [
+      "Playing through an entire song",
+      "shouldn't require stopping to scroll.",
+    ],
     status: "Experiment",
     accent: "amber",
     illustration: "chordframe",
@@ -81,7 +109,10 @@ export const experiments: Experiment[] = [
     id: "closetcast",
     catalogId: "EXP-005",
     name: "ClosetCast",
-    why: "The weather tells you the temperature—but not what to wear.",
+    why: [
+      "The weather tells you the temperature—",
+      "but not what to wear.",
+    ],
     status: "Experiment",
     accent: "rose",
     illustration: "closetcast",
@@ -92,7 +123,10 @@ export const experiments: Experiment[] = [
     id: "timeframe",
     catalogId: "EXP-006",
     name: "TimeFrame",
-    why: "A date should tell a story, not just mark a place on the calendar.",
+    why: [
+      "A date should tell a story,",
+      "not just mark a place on the calendar.",
+    ],
     status: "Experiment",
     accent: "slate",
     illustration: "timeframe",

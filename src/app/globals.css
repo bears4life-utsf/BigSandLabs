@@ -372,19 +372,18 @@ body {
 
 .experiment-card {
   --experiment-accent: var(--accent);
-  --experiment-accent-soft: color-mix(in srgb, var(--experiment-accent) 14%, var(--background-elevated));
+  --experiment-accent-soft: color-mix(in srgb, var(--experiment-accent) 8%, var(--background-elevated));
   display: flex;
   height: 100%;
   flex-direction: column;
-  border: 1px solid color-mix(in srgb, var(--border) 75%, transparent);
-  border-top: 2px solid var(--experiment-accent);
-  background: color-mix(in srgb, var(--background-elevated) 92%, #f7f1e6);
-  padding: 1.65rem 1.6rem 1.7rem;
+  align-items: flex-start;
+  border: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+  border-top: 3px solid var(--experiment-accent);
+  background: color-mix(in srgb, var(--background-elevated) 94%, #f6f0e6);
+  padding: 1.85rem 1.75rem 1.9rem;
   transition:
-    border-color 0.25s ease,
-    background-color 0.25s ease,
-    box-shadow 0.25s ease,
-    transform 0.25s ease;
+    border-color 0.28s ease,
+    transform 0.28s ease;
 }
 
 .experiment-accent-gold {
@@ -412,15 +411,13 @@ body {
 }
 
 .experiment-card:hover {
-  border-color: color-mix(in srgb, var(--experiment-accent) 28%, var(--border));
-  background: var(--background-elevated);
-  box-shadow: 0 1px 1px rgba(42, 38, 34, 0.03),
-    0 10px 24px -18px rgba(42, 38, 34, 0.18);
-  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--experiment-accent) 22%, var(--border));
+  transform: translateY(-2px);
 }
 
 .experiment-meta {
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem 1rem;
@@ -431,11 +428,11 @@ body {
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: color-mix(in srgb, var(--experiment-accent) 55%, var(--stone));
+  color: color-mix(in srgb, var(--experiment-accent) 42%, var(--stone));
 }
 
 .experiment-name {
-  margin: 0.85rem 0 0;
+  margin: 1rem 0 0;
   font-family: var(--font-serif), ui-serif, Georgia, serif;
   font-size: clamp(1.55rem, 2.4vw, 1.85rem);
   line-height: 1.15;
@@ -445,85 +442,120 @@ body {
 
 .experiment-status-chip {
   flex-shrink: 0;
-  border-radius: 0.3rem;
-  border: 1px solid color-mix(in srgb, var(--experiment-accent) 32%, var(--border));
+  border-radius: 0.25rem;
+  border: 1px solid color-mix(in srgb, var(--experiment-accent) 18%, var(--border));
   background: var(--experiment-accent-soft);
-  padding: 0.22rem 0.55rem;
-  font-size: 0.72rem;
+  padding: 0.14rem 0.42rem;
+  font-size: 0.7rem;
   font-weight: 500;
   letter-spacing: 0.01em;
   line-height: 1.2;
   text-transform: none;
-  color: color-mix(in srgb, var(--experiment-accent) 72%, var(--foreground));
-}
-
-.experiment-body {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  gap: 1rem 1.15rem;
-  align-items: start;
-  margin-top: 1.45rem;
-  flex: 1;
+  color: color-mix(in srgb, var(--experiment-accent) 48%, var(--muted));
 }
 
 .experiment-illustration {
   display: inline-flex;
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 5.5rem;
+  height: 5.5rem;
+  margin-top: 1.35rem;
+  margin-bottom: 0.15rem;
   color: var(--experiment-accent);
-  opacity: 0.88;
-  transition: transform 0.3s ease;
+  opacity: 0.8;
 }
 
-.experiment-illustration svg {
+.experiment-illustration svg,
+.experiment-mark {
   width: 100%;
   height: 100%;
+  overflow: visible;
 }
 
-.experiment-card:hover .experiment-illustration {
-  transform: translateY(-2px) rotate(-2deg);
+.experiment-mark-motion {
+  transform-origin: 32px 32px;
+  transition: transform 0.28s ease;
+}
+
+.experiment-mark-flag {
+  transform-origin: 28px 17px;
+}
+
+.experiment-card:hover .experiment-illustration--pokescout .experiment-mark-motion {
+  transform: rotate(8deg);
+}
+
+.experiment-card:hover .experiment-illustration--fairwaycast .experiment-mark-flag {
+  transform: rotate(-7deg) skewX(-2deg);
+}
+
+.experiment-card:hover .experiment-illustration--payson-football .experiment-mark-motion {
+  transform: rotate(9deg);
+}
+
+.experiment-card:hover .experiment-illustration--chordframe .experiment-mark-motion {
+  transform: rotate(-4deg) translateY(1px);
+}
+
+.experiment-card:hover .experiment-illustration--closetcast .experiment-mark-motion {
+  transform: rotate(6deg);
+}
+
+.experiment-card:hover .experiment-illustration--timeframe .experiment-mark-motion {
+  transform: rotate(-6deg);
 }
 
 .experiment-why {
-  min-width: 0;
+  margin-top: 1.35rem;
+  max-width: 28rem;
 }
 
-.experiment-why-text {
+.experiment-why-line {
   margin: 0;
   font-size: 1.02rem;
-  line-height: 1.65;
+  line-height: 1.45;
   color: var(--muted);
 }
 
+.experiment-why-line + .experiment-why-line {
+  margin-top: 0.12rem;
+}
+
+.experiment-why-break {
+  display: block;
+  height: 0.85rem;
+}
+
 .experiment-why-highlight {
-  margin: 0.75rem 0 0;
+  margin: 1rem 0 0;
   font-family: var(--font-serif), ui-serif, Georgia, serif;
-  font-size: 1.2rem;
+  font-size: 1.22rem;
   font-weight: 600;
-  line-height: 1.35;
+  line-height: 1.3;
   letter-spacing: -0.015em;
   color: var(--foreground);
 }
 
 .experiment-link {
-  margin-top: 1.7rem;
-  font-size: 0.92rem;
-  font-weight: 600;
-  color: var(--experiment-accent);
-  transition: color 0.2s ease;
+  margin-top: auto;
+  padding-top: 2rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.015em;
+  color: color-mix(in srgb, var(--experiment-accent) 70%, var(--foreground));
+  transition: color 0.25s ease;
 }
 
 .experiment-link-arrow {
   display: inline-block;
-  transition: transform 0.25s ease;
+  transition: transform 0.28s ease;
 }
 
 .experiment-card:hover .experiment-link {
-  color: color-mix(in srgb, var(--experiment-accent) 82%, black);
+  color: color-mix(in srgb, var(--experiment-accent) 88%, black);
 }
 
 .experiment-card:hover .experiment-link-arrow {
-  transform: translateX(3px);
+  transform: translateX(4px);
 }
 
 .experiment-link-muted {
@@ -533,27 +565,31 @@ body {
 
 @media (max-width: 639px) {
   .experiment-card {
-    padding: 1.45rem 1.3rem 1.5rem;
-  }
-
-  .experiment-body {
-    grid-template-columns: 1fr;
-    gap: 0.9rem;
+    padding: 1.55rem 1.4rem 1.6rem;
   }
 
   .experiment-illustration {
-    width: 3rem;
-    height: 3rem;
+    width: 4.6rem;
+    height: 4.6rem;
+    margin-top: 1.15rem;
   }
 
   .experiment-meta {
     align-items: flex-start;
   }
+
+  .experiment-why {
+    margin-top: 1.15rem;
+  }
+
+  .experiment-link {
+    padding-top: 1.7rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .experiment-card,
-  .experiment-illustration,
+  .experiment-mark-motion,
   .experiment-link-arrow {
     transition: none;
   }
@@ -562,7 +598,8 @@ body {
     transform: none;
   }
 
-  .experiment-card:hover .experiment-illustration,
+  .experiment-card:hover .experiment-mark-motion,
+  .experiment-card:hover .experiment-mark-flag,
   .experiment-card:hover .experiment-link-arrow {
     transform: none;
   }
