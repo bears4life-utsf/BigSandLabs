@@ -1,5 +1,6 @@
 import { BrandMark } from "@/components/BrandMark";
 import { LandscapeBackdrop } from "@/components/LandscapeBackdrop";
+import { LivingExperiments } from "@/components/living-experiments";
 import { site } from "@/content/site";
 
 export function Hero() {
@@ -11,6 +12,7 @@ export function Hero() {
       className="hero-shell relative min-h-[min(92vh,48rem)] overflow-hidden border-b border-border/70"
     >
       <LandscapeBackdrop />
+      <LivingExperiments />
 
       <div className="section-shell hero-content flex min-h-[min(92vh,48rem)] flex-col justify-center pb-28 pt-16 sm:pb-36 sm:pt-12 lg:pb-40 lg:pt-10">
         <div className="hero-panel hero-manifesto -translate-y-10 sm:-translate-y-14 lg:-translate-y-16">

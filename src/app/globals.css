@@ -269,7 +269,7 @@ body {
 
 .hero-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .hero-panel {
@@ -531,6 +531,194 @@ body {
   }
 }
 
+
+/* —— Living Experiments —— */
+.living-experiments-stage {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.living-actor {
+  position: absolute;
+  color: #4a5d55;
+  will-change: transform;
+  animation-duration: var(--living-duration, 8s);
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.living-explorer,
+.living-pair {
+  bottom: calc(6% + (var(--living-lane, 0.2) * 12%));
+  width: 2.4rem;
+}
+
+.living-explorer-svg,
+.living-pair-explorer {
+  width: 2.35rem;
+  height: auto;
+  display: block;
+  transform: scaleX(var(--living-facing, 1));
+  transform-origin: center;
+}
+
+.living-explorer .living-explorer-arm {
+  transform-origin: 20px 18.5px;
+  animation: living-wave 0.7s ease-in-out 2;
+  animation-delay: calc(var(--living-duration, 8s) * 0.42);
+}
+
+.living-pair {
+  width: 5.5rem;
+}
+
+.living-pair-inner {
+  position: relative;
+  width: 5.5rem;
+  height: 3.6rem;
+}
+
+.living-pair-explorer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.living-dog-svg {
+  position: absolute;
+  left: 2.1rem;
+  bottom: 0.15rem;
+  width: 2.7rem;
+  height: auto;
+  color: #5c6b58;
+  transform: scaleX(var(--living-facing, 1));
+  transform-origin: center;
+  animation: living-dog-dash var(--living-duration, 8s) linear forwards;
+}
+
+.living-ufo {
+  top: calc(10% + (var(--living-lane, 0.15) * 18%));
+  width: 3.1rem;
+  color: #3f5563;
+}
+
+.living-ufo-svg {
+  width: 3.1rem;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 1px 2px rgba(42, 38, 34, 0.12));
+}
+
+.living-ufo-beam {
+  animation: living-ufo-beam-pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes living-explorer-ltr {
+  0% { left: -8%; transform: translateY(0); opacity: 0; }
+  6% { opacity: 0.9; }
+  38% { left: 46%; transform: translateY(0); }
+  42% { left: 46%; transform: translateY(-2px); }
+  50% { left: 46%; transform: translateY(0); }
+  94% { opacity: 0.9; }
+  100% { left: 108%; opacity: 0; }
+}
+
+@keyframes living-explorer-rtl {
+  0% { right: -8%; left: auto; transform: translateY(0); opacity: 0; }
+  6% { opacity: 0.9; }
+  38% { right: 46%; left: auto; transform: translateY(0); }
+  42% { right: 46%; left: auto; transform: translateY(-2px); }
+  50% { right: 46%; left: auto; transform: translateY(0); }
+  94% { opacity: 0.9; }
+  100% { right: 108%; left: auto; opacity: 0; }
+}
+
+@keyframes living-pair-ltr {
+  0% { left: -12%; opacity: 0; }
+  6% { opacity: 0.92; }
+  34% { left: 42%; }
+  48% { left: 42%; }
+  94% { opacity: 0.92; }
+  100% { left: 110%; opacity: 0; }
+}
+
+@keyframes living-pair-rtl {
+  0% { right: -12%; left: auto; opacity: 0; }
+  6% { opacity: 0.92; }
+  34% { right: 42%; left: auto; }
+  48% { right: 42%; left: auto; }
+  94% { opacity: 0.92; }
+  100% { right: 110%; left: auto; opacity: 0; }
+}
+
+@keyframes living-dog-dash {
+  0%, 30% { transform: scaleX(var(--living-facing, 1)) translateX(0); }
+  38% { transform: scaleX(var(--living-facing, 1)) translateX(calc(var(--living-facing, 1) * 1.6rem)); }
+  44% { transform: scaleX(calc(var(--living-facing, 1) * -1)) translateX(calc(var(--living-facing, 1) * 1.6rem)); }
+  52% { transform: scaleX(var(--living-facing, 1)) translateX(0); }
+  100% { transform: scaleX(var(--living-facing, 1)) translateX(0); }
+}
+
+@keyframes living-wave {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-28deg); }
+}
+
+@keyframes living-ufo-ltr {
+  0% { left: -10%; transform: translateY(0) rotate(-4deg); opacity: 0; }
+  8% { opacity: 0.85; }
+  40% { left: 58%; transform: translateY(4px) rotate(0deg); }
+  48% { left: 60%; transform: translateY(-2px) rotate(3deg); }
+  56% { left: 62%; transform: translateY(3px) rotate(-2deg); }
+  100% { left: 112%; transform: translateY(-6px) rotate(6deg); opacity: 0; }
+}
+
+@keyframes living-ufo-rtl {
+  0% { right: -10%; left: auto; transform: translateY(0) rotate(4deg); opacity: 0; }
+  8% { opacity: 0.85; }
+  40% { right: 58%; left: auto; transform: translateY(4px) rotate(0deg); }
+  48% { right: 60%; left: auto; transform: translateY(-2px) rotate(-3deg); }
+  56% { right: 62%; left: auto; transform: translateY(3px) rotate(2deg); }
+  100% { right: 112%; left: auto; transform: translateY(-6px) rotate(-6deg); opacity: 0; }
+}
+
+@keyframes living-ufo-beam-pulse {
+  0%, 100% { opacity: 0.05; }
+  50% { opacity: 0.14; }
+}
+
+@media (max-width: 639px) {
+  .living-explorer,
+  .living-pair {
+    bottom: calc(4% + (var(--living-lane, 0.2) * 10%));
+  }
+
+  .living-explorer-svg,
+  .living-pair-explorer {
+    width: 2rem;
+  }
+
+  .living-pair {
+    width: 4.6rem;
+  }
+
+  .living-dog-svg {
+    width: 2.2rem;
+    left: 1.7rem;
+  }
+
+  .living-ufo {
+    top: calc(8% + (var(--living-lane, 0.15) * 14%));
+  }
+
+  .living-ufo-svg {
+    width: 2.5rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal,
   .reveal-delay-1,
@@ -543,5 +731,14 @@ body {
   .landscape-water,
   .landscape-glow {
     animation: none;
+  }
+
+  .living-experiments-stage,
+  .living-actor,
+  .living-explorer-arm,
+  .living-dog-svg,
+  .living-ufo-beam {
+    animation: none !important;
+    display: none !important;
   }
 }
