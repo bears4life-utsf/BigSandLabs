@@ -270,6 +270,12 @@ body {
 .hero-content {
   position: relative;
   z-index: 2;
+  /* Pass clicks through empty hero space to Explorer underneath */
+  pointer-events: none;
+}
+
+.hero-content a {
+  pointer-events: auto;
 }
 
 .hero-panel {
@@ -640,182 +646,423 @@ body {
 }
 
 
-/* —— Living landscape dweller —— */
+/* —— Living landscape: Explorer presence —— */
 .living-experiments-stage {
   pointer-events: none;
   position: absolute;
   inset: 0;
-  z-index: 1;
+  /* Above hero-content so Explorer receives clicks in its hit box */
+  z-index: 3;
   overflow: hidden;
 }
 
-.stick-dweller {
+.explorer-presence {
   position: absolute;
-  width: 1.15rem;
-  height: 1.9rem;
-  color: rgba(58, 66, 58, 0.72);
-  transform-origin: center bottom;
-  transition: opacity 0.55s ease;
-  will-change: left, bottom;
+  z-index: 2;
+  /* Guide on near-dune crest (~67% across) — not corner-pasted */
+  left: 67%;
+  right: auto;
+  bottom: calc(14% - 3px);
+  width: clamp(8.4rem, 23vw, 13.5rem); /* ~17% above prior live size */
+  aspect-ratio: 1 / 1;
+  transform: translateX(-50%);
+  opacity: 0.96;
+  background: transparent;
+  pointer-events: auto;
+  cursor: pointer;
 }
 
-.stick-dweller-svg {
+.explorer-contact-shadow {
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  bottom: 4.5%;
+  width: 48%;
+  height: 7%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(42, 38, 34, 0.2) 0%,
+    rgba(42, 38, 34, 0.08) 42%,
+    transparent 74%
+  );
+  pointer-events: none;
+}
+
+.explorer-presence-figure {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 1 / 1;
+  /* Face headline; dig soles into crest; soft-mask sole tips behind sand */
+  transform: scaleX(-1) translateY(calc(7% + 3px));
+  transform-origin: center bottom;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 93.4%,
+    rgba(0, 0, 0, 0.55) 94.2%,
+    transparent 95.2%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 93.4%,
+    rgba(0, 0, 0, 0.55) 94.2%,
+    transparent 95.2%
+  );
+}
+
+.bsl-explorer {
+  /* Palette locked to Explorer_Rigged / Master */
+  --c-white: #f7f7f7;
+  --c-gray: #c6c6c5;
+  --c-gray-mid: #cfcece;
+  --c-gray-soft: #ebeaea;
+  --c-gray-light: #dddddc;
+  --c-sand: #e9d6aa;
+  --c-khaki: #ba9b69;
+  --c-olive: #8d8050;
+  --c-brown: #815b2c;
+  --c-brown-deep: #6b4921;
+  --c-ink: #412d18;
+  --c-eye: #46331f;
+  flex-shrink: 0;
+  line-height: 0;
+}
+
+.bsl-explorer-svg {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
   overflow: visible;
 }
 
-.stick-dweller path,
-.stick-dweller circle {
-  stroke: currentColor;
-  stroke-width: 1.35;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  fill: none;
-}
-
-.stick-head {
-  fill: currentColor;
+.bsl-explorer .facet {
   stroke: none;
-  opacity: 0.85;
 }
 
-.stick-shadow {
-  fill: currentColor;
-  stroke: none;
-  opacity: 0.12;
+/* Transform origins from Explorer_Rigged (viewBox 0 0 1024 1024) */
+.bsl-explorer #explorer,
+.bsl-explorer #torso,
+.bsl-explorer #backpack,
+.bsl-explorer #hat,
+.bsl-explorer #compass,
+.bsl-explorer #eyes,
+.bsl-explorer #head,
+.bsl-explorer #left-leg,
+.bsl-explorer #right-leg,
+.bsl-explorer #left-boot,
+.bsl-explorer #right-boot {
+  transform-box: view-box;
 }
 
-.stick-body {
-  transform-origin: 12px 22px;
+.bsl-explorer #explorer {
+  transform-origin: 520px 920px;
 }
 
-.stick-arm-l,
-.stick-arm-r,
-.stick-leg-l,
-.stick-leg-r,
-.stick-head {
-  transform-box: fill-box;
-  transform-origin: center;
+.bsl-explorer #hat {
+  transform-origin: 504px 175px;
 }
 
-.stick-arm-l {
-  transform-origin: 12px 11.5px;
+.bsl-explorer #backpack {
+  transform-origin: 360px 500px;
 }
 
-.stick-arm-r {
-  transform-origin: 12px 11.5px;
+.bsl-explorer #head {
+  transform-origin: 560px 310px;
 }
 
-.stick-leg-l,
-.stick-leg-r {
-  transform-origin: 12px 22px;
+.bsl-explorer #eyes {
+  transform-origin: 610px 290px;
 }
 
-.stick-dweller.is-walk .stick-body {
-  animation: stick-bob 0.52s ease-in-out infinite;
+.bsl-explorer #torso {
+  transform-origin: 545px 560px;
 }
 
-.stick-dweller.is-walk .stick-arm-l {
-  animation: stick-arm-l 0.52s ease-in-out infinite;
+.bsl-explorer #compass {
+  transform-origin: 381px 756px;
 }
 
-.stick-dweller.is-walk .stick-arm-r {
-  animation: stick-arm-r 0.52s ease-in-out infinite;
+.bsl-explorer #left-leg {
+  transform-origin: 598px 780px;
 }
 
-.stick-dweller.is-walk .stick-leg-l {
-  animation: stick-leg-l 0.52s ease-in-out infinite;
+.bsl-explorer #right-leg {
+  transform-origin: 480px 780px;
 }
 
-.stick-dweller.is-walk .stick-leg-r {
-  animation: stick-leg-r 0.52s ease-in-out infinite;
+.bsl-explorer #left-boot {
+  transform-origin: 628px 832px;
 }
 
-.stick-dweller.is-wave .stick-arm-r {
-  animation: stick-wave 0.45s ease-in-out 3;
+.bsl-explorer #right-boot {
+  transform-origin: 448px 832px;
 }
 
-.stick-dweller.is-scratch .stick-arm-r {
-  animation: stick-scratch 0.4s ease-in-out 3;
+.bsl-explorer:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 0.35rem;
 }
 
-.stick-dweller.is-look .stick-head {
-  animation: stick-look 1.5s ease-in-out 1;
+/*
+ * Behavior engine:
+ * - .is-alive → continuous breathing (base)
+ * - .is-*     → one-shot specials (mutex via JS scheduler)
+ */
+.bsl-explorer.is-alive #explorer {
+  animation: explorer-breathe 4.4s ease-in-out infinite;
 }
 
-.stick-dweller.is-sun .stick-head {
-  animation: stick-sun-gaze 1.6s ease-in-out 1;
+.bsl-explorer.is-alive #torso {
+  animation: explorer-torso 4.4s ease-in-out infinite;
 }
 
-.stick-dweller.is-sit .stick-body {
-  transform: translateY(3px) scaleY(0.86);
+.bsl-explorer.is-alive #backpack {
+  animation: explorer-pack 4.4s ease-in-out infinite;
+  animation-delay: -0.55s;
 }
 
-.stick-dweller.is-sit .stick-leg-l,
-.stick-dweller.is-sit .stick-leg-r {
-  transform: rotate(18deg);
+/* Hat rides the breath — tiny lag, not an independent loop */
+.bsl-explorer.is-alive #hat {
+  animation: explorer-hat-follow 4.4s ease-in-out infinite;
+  animation-delay: -0.35s;
 }
 
-.stick-dweller.is-sit .stick-leg-r {
-  transform: rotate(-18deg);
+/* —— Specials (one-shot; class removed by scheduler) —— */
+
+.bsl-explorer.is-blink #eyes {
+  animation: explorer-blink-once 0.28s ease-in-out 1;
 }
 
-.stick-dweller.is-hide {
-  opacity: 0;
+.bsl-explorer.is-blink-double #eyes {
+  animation: explorer-blink-double 0.52s ease-in-out 1;
 }
 
-@keyframes stick-bob {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-1px); }
+.bsl-explorer.is-compass #compass {
+  animation: explorer-compass-sway 2.8s cubic-bezier(0.33, 0.12, 0.2, 1) 1;
 }
 
-@keyframes stick-arm-l {
-  0%, 100% { transform: rotate(18deg); }
-  50% { transform: rotate(-22deg); }
+.bsl-explorer.is-glance #eyes {
+  animation: explorer-glance 2.4s ease-in-out 1;
 }
 
-@keyframes stick-arm-r {
-  0%, 100% { transform: rotate(-18deg); }
-  50% { transform: rotate(22deg); }
+.bsl-explorer.is-weight #left-leg {
+  animation: explorer-weight-leg 2.8s ease-in-out 1;
 }
 
-@keyframes stick-leg-l {
-  0%, 100% { transform: rotate(-16deg); }
-  50% { transform: rotate(18deg); }
+.bsl-explorer.is-weight #left-boot {
+  animation: explorer-weight-boot 2.8s ease-in-out 1;
 }
 
-@keyframes stick-leg-r {
-  0%, 100% { transform: rotate(16deg); }
-  50% { transform: rotate(-18deg); }
+.bsl-explorer.is-weight #right-leg {
+  animation: explorer-weight-leg-counter 2.8s ease-in-out 1;
 }
 
-@keyframes stick-wave {
-  0%, 100% { transform: rotate(-10deg); }
-  50% { transform: rotate(-55deg); }
+.bsl-explorer.is-weight #torso {
+  animation: explorer-weight-torso 2.8s ease-in-out 1;
 }
 
-@keyframes stick-scratch {
-  0%, 100% { transform: rotate(-70deg); }
-  50% { transform: rotate(-95deg); }
+.bsl-explorer.is-hat-tilt #hat {
+  animation: explorer-hat-tilt 1s ease-in-out 1;
 }
 
-@keyframes stick-look {
-  0%, 100% { transform: translateX(0); }
-  35% { transform: translateX(-1.2px); }
-  70% { transform: translateX(1.2px); }
+@keyframes explorer-breathe {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2.2px);
+  }
 }
 
-@keyframes stick-sun-gaze {
-  0%, 100% { transform: translate(0, 0); }
-  40%, 70% { transform: translate(0.8px, -0.8px); }
+@keyframes explorer-torso {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.006);
+  }
+}
+
+@keyframes explorer-pack {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1.4px);
+  }
+}
+
+@keyframes explorer-hat-follow {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(0.35deg);
+  }
+}
+
+@keyframes explorer-blink-once {
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+  40%,
+  55% {
+    transform: scaleY(0.08);
+  }
+}
+
+@keyframes explorer-blink-double {
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+  18%,
+  28% {
+    transform: scaleY(0.08);
+  }
+  38% {
+    transform: scaleY(1);
+  }
+  55%,
+  68% {
+    transform: scaleY(0.08);
+  }
+}
+
+/* Gentle swing → settle → rest (not a continuous loop) */
+@keyframes explorer-compass-sway {
+  0% {
+    transform: rotate(0deg);
+  }
+  18% {
+    transform: rotate(9deg);
+  }
+  42% {
+    transform: rotate(-7deg);
+  }
+  68% {
+    transform: rotate(3.5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/*
+ * Horizon glance: Explorer is CSS-flipped to face left (headline).
+ * Local −X becomes screen-right (open landscape / sun).
+ */
+@keyframes explorer-glance {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  18%,
+  72% {
+    transform: translate(-11px, -2.5px);
+  }
+}
+
+@keyframes explorer-weight-leg {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  32%,
+  58% {
+    transform: rotate(5.5deg);
+  }
+}
+
+@keyframes explorer-weight-boot {
+  0%,
+  100% {
+    transform: rotate(0deg) translateY(0);
+  }
+  32%,
+  58% {
+    transform: rotate(-2.5deg) translateY(1.2px);
+  }
+}
+
+@keyframes explorer-weight-leg-counter {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  32%,
+  58% {
+    transform: rotate(-2.8deg);
+  }
+}
+
+@keyframes explorer-weight-torso {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+  32%,
+  58% {
+    transform: scale(1.004) rotate(1.4deg);
+  }
+}
+
+@keyframes explorer-hat-tilt {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  35% {
+    transform: rotate(4.2deg);
+  }
+  65% {
+    transform: rotate(3.4deg);
+  }
+}
+
+@media (max-width: 1023px) {
+  .explorer-presence {
+    left: 70%;
+    bottom: calc(13% - 2px);
+    width: clamp(7.75rem, 22vw, 11.5rem);
+  }
 }
 
 @media (max-width: 639px) {
-  .stick-dweller {
-    width: 1rem;
-    height: 1.65rem;
+  .explorer-presence {
+    left: 82%;
+    bottom: calc(8% - 2px);
+    width: clamp(6.5rem, 38vw, 8.5rem);
+    opacity: 0.94;
+  }
+
+  .explorer-presence-figure {
+    transform: scaleX(-1) translateY(calc(4.5% + 2px));
+  }
+
+  .explorer-contact-shadow {
+    bottom: 5%;
+    width: 46%;
+    height: 5%;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(42, 38, 34, 0.14) 0%,
+      rgba(42, 38, 34, 0.05) 45%,
+      transparent 72%
+    );
   }
 }
 
@@ -833,8 +1080,19 @@ body {
     animation: none;
   }
 
-  .living-experiments-stage,
-  .stick-dweller {
-    display: none !important;
+  .bsl-explorer.is-alive #explorer,
+  .bsl-explorer.is-alive #torso,
+  .bsl-explorer.is-alive #backpack,
+  .bsl-explorer.is-alive #hat,
+  .bsl-explorer.is-blink #eyes,
+  .bsl-explorer.is-blink-double #eyes,
+  .bsl-explorer.is-compass #compass,
+  .bsl-explorer.is-glance #eyes,
+  .bsl-explorer.is-weight #left-leg,
+  .bsl-explorer.is-weight #left-boot,
+  .bsl-explorer.is-weight #right-leg,
+  .bsl-explorer.is-weight #torso,
+  .bsl-explorer.is-hat-tilt #hat {
+    animation: none !important;
   }
 }
