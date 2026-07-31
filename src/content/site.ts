@@ -55,9 +55,9 @@ export const site = {
   },
   experiments: {
     eyebrow: "Experiments",
-    headline: "On the workbench",
+    headline: "Built from Curiosity",
     intro:
-      "Open one to explore why it exists—and what it became.",
+      "Ideas become experiments. The most useful become products worth sharing.",
   },
   closing: {
     headline: "Beyond the Lab",
