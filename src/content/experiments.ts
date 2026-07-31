@@ -20,12 +20,8 @@ export type Experiment = {
   id: string;
   catalogId: string;
   name: string;
-  /** Problem statement — one concise sentence. */
-  whySetup: string;
-  /** Solution statement — one concise sentence. */
-  whySupport: string;
-  /** Bold takeaway — emotional payoff. */
-  whyHighlight: string;
+  /** Body description for the experiment card. */
+  description: string;
   status: ExperimentStatus;
   accent: ExperimentAccent;
   illustration: ExperimentIllustration;
@@ -38,11 +34,8 @@ export const experiments: Experiment[] = [
     id: "pokescout",
     catalogId: "EXP-001",
     name: "PokeScout",
-    whySetup:
-      "Learning Pokémon shouldn't require jumping between multiple websites.",
-    whySupport:
-      "Find characters, battles, and type matchups in one place.",
-    whyHighlight: "Spend less time searching. More time understanding.",
+    description:
+      "Learning Pokémon shouldn't mean jumping between websites. Explore Pokémon, moves, type matchups, and battles—all without leaving the page.",
     status: "Experiment",
     accent: "gold",
     illustration: "pokescout",
@@ -53,10 +46,8 @@ export const experiments: Experiment[] = [
     id: "fairwaycast",
     catalogId: "EXP-002",
     name: "FairwayCast",
-    whySetup:
-      "Weather apps show the forecast, not whether it's worth playing.",
-    whySupport: "Turn weather into a simple golf recommendation.",
-    whyHighlight: "Should I play golf today?",
+    description:
+      "Weather apps tell you the forecast, not whether it's worth playing. Turn today's conditions into a simple golf recommendation.",
     status: "Experiment",
     accent: "golf",
     illustration: "fairwaycast",
@@ -67,11 +58,8 @@ export const experiments: Experiment[] = [
     id: "payson-football",
     catalogId: "EXP-003",
     name: "Payson Football",
-    whySetup:
-      "Game-day information shouldn't be scattered across multiple places.",
-    whySupport:
-      "Bring schedules, locations, weather, and team details together.",
-    whyHighlight: "Built for families following multiple players.",
+    description:
+      "Game-day information shouldn't be scattered across multiple places. Find schedules, locations, weather, and team updates in one place.",
     status: "Live",
     accent: "payson",
     illustration: "payson-football",
@@ -82,9 +70,8 @@ export const experiments: Experiment[] = [
     id: "chordframe",
     catalogId: "EXP-004",
     name: "ChordFrame",
-    whySetup: "Playing guitar shouldn't require stopping to scroll.",
-    whySupport: "Keep the entire song visible while playing.",
-    whyHighlight: "Play through the whole song without interruption.",
+    description:
+      "Playing guitar shouldn't mean stopping to scroll. Keep the entire song visible from the first chord to the last.",
     status: "Experiment",
     accent: "amber",
     illustration: "chordframe",
@@ -95,9 +82,8 @@ export const experiments: Experiment[] = [
     id: "closetcast",
     catalogId: "EXP-005",
     name: "ClosetCast",
-    whySetup: "The temperature alone doesn't tell you what to wear.",
-    whySupport: "Recommend clothing based on the real conditions.",
-    whyHighlight: "Know what to wear before you leave.",
+    description:
+      "Knowing the temperature isn't the same as knowing what to wear. Get clothing recommendations based on the conditions you'll actually experience.",
     status: "Experiment",
     accent: "rose",
     illustration: "closetcast",
@@ -108,9 +94,8 @@ export const experiments: Experiment[] = [
     id: "timeframe",
     catalogId: "EXP-006",
     name: "TimeFrame",
-    whySetup: "Dates shouldn't just mark time.",
-    whySupport: "Add historical context to every day.",
-    whyHighlight: "Every date has a story.",
+    description:
+      "Dates shouldn't just mark time. Discover the people and events that make every day in history worth remembering.",
     status: "Experiment",
     accent: "slate",
     illustration: "timeframe",

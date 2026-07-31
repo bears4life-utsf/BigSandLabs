@@ -20,14 +20,25 @@ export function About() {
           </h2>
 
           <div className="mt-8">
-            {about.paragraphs.map((paragraph) => (
-              <p
-                key={paragraph.slice(0, 40)}
-                className="text-base leading-[1.7] text-muted sm:text-lg sm:leading-[1.75]"
-              >
-                {paragraph}
-              </p>
-            ))}
+            {about.paragraphs.map((paragraph) => {
+              const name = founder.name;
+              const [before, after] = paragraph.split(name);
+
+              return (
+                <p
+                  key={paragraph.slice(0, 40)}
+                  className="text-base leading-[1.7] text-muted sm:text-lg sm:leading-[1.75]"
+                >
+                  {before}
+                  {after !== undefined ? (
+                    <strong className="font-semibold text-foreground">
+                      {name}
+                    </strong>
+                  ) : null}
+                  {after}
+                </p>
+              );
+            })}
           </div>
         </div>
 

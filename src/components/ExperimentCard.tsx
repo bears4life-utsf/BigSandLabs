@@ -21,9 +21,7 @@ export function ExperimentCard({ experiment }: ExperimentCardProps) {
       />
 
       <div className="experiment-why">
-        <p className="experiment-why-line">{experiment.whySetup}</p>
-        <p className="experiment-why-line">{experiment.whySupport}</p>
-        <p className="experiment-why-highlight">{experiment.whyHighlight}</p>
+        <p className="experiment-why-line">{experiment.description}</p>
       </div>
 
       {experiment.href ? (

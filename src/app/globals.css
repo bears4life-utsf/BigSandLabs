@@ -375,13 +375,13 @@ body {
   --experiment-accent-soft: color-mix(in srgb, var(--experiment-accent) 6%, var(--background-elevated));
   display: flex;
   height: 100%;
-  min-height: 29.5rem;
+  min-height: 24.5rem;
   flex-direction: column;
   align-items: flex-start;
   border: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
   border-top: 3px solid var(--experiment-accent);
   background: color-mix(in srgb, var(--background-elevated) 94%, #f6f0e6);
-  padding: 1.45rem 1.55rem 1.4rem;
+  padding: 1.35rem 1.5rem 1.25rem;
   transition:
     border-color 0.28s ease,
     transform 0.28s ease;
@@ -433,7 +433,7 @@ body {
 }
 
 .experiment-name {
-  margin: 0.75rem 0 0;
+  margin: 0.55rem 0 0;
   font-family: var(--font-serif), ui-serif, Georgia, serif;
   font-size: clamp(1.55rem, 2.4vw, 1.85rem);
   line-height: 1.15;
@@ -460,7 +460,7 @@ body {
   flex-shrink: 0;
   width: 6.75rem;
   height: 6.75rem;
-  margin-top: 0.7rem;
+  margin-top: 0.45rem;
   color: var(--experiment-accent);
   opacity: 0.86;
 }
@@ -506,10 +506,8 @@ body {
 }
 
 .experiment-why {
-  margin-top: 0.7rem;
+  margin-top: 0.45rem;
   width: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
 .experiment-why-line {
@@ -519,23 +517,9 @@ body {
   color: var(--muted);
 }
 
-.experiment-why-line + .experiment-why-line {
-  margin-top: 0.5rem;
-}
-
-.experiment-why-highlight {
-  margin: 0.625rem 0 0;
-  font-family: var(--font-serif), ui-serif, Georgia, serif;
-  font-size: 1.2rem;
-  font-weight: 600;
-  line-height: 1.28;
-  letter-spacing: -0.015em;
-  color: var(--foreground);
-}
-
 .experiment-link {
   margin-top: auto;
-  padding-top: 1.15rem;
+  padding-top: 0.85rem;
   font-size: 0.88rem;
   font-weight: 500;
   letter-spacing: 0.015em;
@@ -563,14 +547,14 @@ body {
 
 @media (max-width: 639px) {
   .experiment-card {
-    min-height: 27.5rem;
-    padding: 1.35rem 1.3rem 1.3rem;
+    min-height: 23rem;
+    padding: 1.25rem 1.3rem 1.15rem;
   }
 
   .experiment-illustration {
     width: 5.5rem;
     height: 5.5rem;
-    margin-top: 0.65rem;
+    margin-top: 0.4rem;
   }
 
   .experiment-meta {
@@ -578,11 +562,11 @@ body {
   }
 
   .experiment-why {
-    margin-top: 0.65rem;
+    margin-top: 0.4rem;
   }
 
   .experiment-link {
-    padding-top: 1rem;
+    padding-top: 0.75rem;
   }
 }
 
