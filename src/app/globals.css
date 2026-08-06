@@ -599,6 +599,10 @@ body {
     color var(--theme-duration) var(--theme-ease);
 }
 
+.experiment-accent-porch {
+  --experiment-accent: #9a8452;
+}
+
 .experiment-accent-gold {
   --experiment-accent: #9a7d3f;
 }
@@ -621,6 +625,10 @@ body {
 
 .experiment-accent-slate {
   --experiment-accent: #5a6d7c;
+}
+
+[data-theme="night"] .experiment-accent-porch {
+  --experiment-accent: #c4ae6e;
 }
 
 [data-theme="night"] .experiment-accent-gold {
@@ -715,6 +723,10 @@ body {
 
 .experiment-mark-flag {
   transform-origin: 28px 17px;
+}
+
+.experiment-card:hover .experiment-illustration--porchlight .experiment-mark-motion {
+  transform: rotate(-5deg) translateY(1px);
 }
 
 .experiment-card:hover .experiment-illustration--pokescout .experiment-mark-motion {

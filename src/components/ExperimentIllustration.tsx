@@ -17,6 +17,28 @@ const svgProps = {
   strokeLinejoin: "round" as const,
 };
 
+function PorchLightMark() {
+  return (
+    <svg className="experiment-mark" viewBox="0 0 64 64" {...svgProps}>
+      <g className="experiment-mark-motion">
+        <path d="M14.5 29.2 32 15.8 49.5 29.2" />
+        <path d="M18.2 29.2V48.4" />
+        <path d="M45.8 29.2V48.4" />
+        <path d="M13.2 48.4h37.6" />
+        <path d="M22.4 48.4V41.2h19.2v7.2" />
+        <path d="M32 21.4v7.2" />
+        <path d="M27.4 28.6h9.2" />
+        <path d="M28.2 28.6v9.8h7.6V28.6" />
+        <path d="M28.2 38.4 32 41.2 35.8 38.4" />
+        <path d="M22.8 33.6h4.2" />
+        <path d="M37 33.6h4.2" />
+        <path d="M24.6 37.8h2.8" />
+        <path d="M36.6 37.8h2.8" />
+      </g>
+    </svg>
+  );
+}
+
 function PokeScoutMark() {
   return (
     <svg className="experiment-mark" viewBox="0 0 64 64" {...svgProps}>
@@ -100,6 +122,7 @@ function TimeFrameMark() {
 }
 
 const illustrations: Record<ExperimentIllustration, () => ReactElement> = {
+  porchlight: PorchLightMark,
   pokescout: PokeScoutMark,
   fairwaycast: FairwayCastMark,
   "payson-football": PaysonFootballMark,
